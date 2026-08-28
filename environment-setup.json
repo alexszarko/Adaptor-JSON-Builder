@@ -1,0 +1,1602 @@
+{
+  "UIT-A": {
+    "3.0": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-00",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-00_IS1_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-01",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-01_IS2_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-02",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-02_ES_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-03",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-03_GS1_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-04",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-04_GS2_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-05",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-05_ED_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-06",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-06_GT_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-07",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-07_RSA_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-08",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-08_OU_DUIS3.0"
+      }
+    ],
+    "3.1": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-09",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-09_IS1_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-10",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-10_IS2_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-11",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-11_ES_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-12",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-12_GS1_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-13",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-13_GS2_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-14",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-14_ED_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-15",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-15_GT_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-16",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-16_RSA_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-17",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-17_OU_DUIS3.1"
+      }
+    ],
+    "4.0": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-18",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-18_IS1_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-19",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-19_IS2_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-20",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-20_ES_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-21",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-21_GS1_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-22",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-22_GS2_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-23",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-23_ED_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-24",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-24_GT_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-25",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-25_RSA_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-26",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-26_OU_DUIS4.0"
+      }
+    ],
+    "5.0": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-27",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-27_IS1_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-28",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-28_IS2_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-29",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-29_ES_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-30",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-30_GS1_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-31",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-31_GS2_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-32",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-32_ED_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-33",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-33_GT_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-34",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-34_RSA_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-35",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-35_OU_DUIS5.0"
+      }
+    ],
+    "5.1": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-36",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-36_IS1_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-37",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-37_IS2_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-38",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-38_ES_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-39",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-39_GS1_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-40",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-40_GS2_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-41",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-41_ED_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-42",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-42_GT_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-43",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-43_RSA_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-44",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-44_OU_DUIS5.1"
+      }
+    ],
+    "5.2": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-45",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-45_IS1_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-46",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-46_IS2_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-47",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-47_ES_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-48",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-48_GS1_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-49",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-49_GS2_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-50",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-50_ED_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-51",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-51_GT_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-52",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-52_RSA_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-53",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-53_OU_DUIS5.2"
+      }
+    ],
+    "5.3": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-54",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-54_IS1_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-55",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-55_IS2_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-56",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-56_ES_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-57",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-57_GS1_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-58",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-58_GS2_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-59",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-59_ED_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-60",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-60_GT_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-61",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-61_RSA_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-62",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-62_OU_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-03-63",
+        "role": "Meter Data Retriever",
+        "duisRole": "MDR",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-03-63_MDR_DUIS5.3"
+      }
+    ]
+  },
+  "UIT-B": {
+    "3.0": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-00",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-00_IS1_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-01",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-01_IS2_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-02",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-02_ES_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-03",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-03_GS1_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-04",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-04_GS2_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-05",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-05_ED_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-06",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-06_GT_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-07",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-07_RSA_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-08",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-08_OU_DUIS3.0"
+      }
+    ],
+    "3.1": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-09",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-09_IS1_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-10",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-10_IS2_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-11",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-11_ES_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-12",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-12_GS1_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-13",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-13_GS2_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-14",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-14_ED_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-15",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-15_GT_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-16",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-16_RSA_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-17",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-17_OU_DUIS3.1"
+      }
+    ],
+    "4.0": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-18",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-18_IS1_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-19",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-19_IS2_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-20",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-20_ES_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-21",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-21_GS1_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-22",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-22_GS2_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-23",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-23_ED_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-24",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-24_GT_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-25",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-25_RSA_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-26",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-26_OU_DUIS4.0"
+      }
+    ],
+    "5.0": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-27",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-27_IS1_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-28",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-28_IS2_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-29",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-29_ES_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-30",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-30_GS1_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-31",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-31_GS2_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-32",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-32_ED_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-33",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-33_GT_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-34",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-34_RSA_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-35",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-35_OU_DUIS5.0"
+      }
+    ],
+    "5.1": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-36",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-36_IS1_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-37",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-37_IS2_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-38",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-38_ES_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-39",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-39_GS1_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-40",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-40_GS2_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-41",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-41_ED_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-42",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-42_GT_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-43",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-43_RSA_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-44",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-44_OU_DUIS5.1"
+      }
+    ],
+    "5.2": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-45",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-45_IS1_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-46",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-46_IS2_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-47",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-47_ES_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-48",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-48_GS1_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-49",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-49_GS2_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-50",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-50_ED_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-51",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-51_GT_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-52",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-52_RSA_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-53",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-53_OU_DUIS5.2"
+      }
+    ],
+    "5.3": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-54",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-54_IS1_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-55",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-55_IS2_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-56",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-56_ES_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-57",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-57_GS1_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-58",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-58_GS2_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-59",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-59_ED_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-60",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-60_GT_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-61",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-61_RSA_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-62",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-62_OU_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-04-63",
+        "role": "Meter Data Retriever",
+        "duisRole": "MDR",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-04-63_MDR_DUIS5.3"
+      }
+    ]
+  },
+  "SIT-A": {
+    "3.0": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-00",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-00_IS1_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-01",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-01_IS2_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-02",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-02_ES_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-03",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-03_GS1_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-04",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-04_GS2_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-05",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-05_ED_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-06",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-06_GT_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-07",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-07_RSA_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-08",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-08_OU_DUIS3.0"
+      }
+    ],
+    "3.1": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-09",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-09_IS1_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-10",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-10_IS2_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-11",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-11_ES_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-12",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-12_GS1_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-13",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-13_GS2_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-14",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-14_ED_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-15",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-15_GT_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-16",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-16_RSA_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-17",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-17_OU_DUIS3.1"
+      }
+    ],
+    "4.0": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-18",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-18_IS1_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-19",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-19_IS2_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-20",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-20_ES_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-21",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-21_GS1_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-22",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-22_GS2_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-23",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-23_ED_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-24",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-24_GT_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-25",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-25_RSA_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-26",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-26_OU_DUIS4.0"
+      }
+    ],
+    "5.0": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-27",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-27_IS1_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-28",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-28_IS2_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-29",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-29_ES_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-30",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-30_GS1_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-31",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-31_GS2_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-32",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-32_ED_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-33",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-33_GT_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-34",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-34_RSA_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-35",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-35_OU_DUIS5.0"
+      }
+    ],
+    "5.1": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-36",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-36_IS1_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-37",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-37_IS2_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-38",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-38_ES_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-39",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-39_GS1_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-40",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-40_GS2_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-41",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-41_ED_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-42",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-42_GT_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-43",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-43_RSA_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-44",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-44_OU_DUIS5.1"
+      }
+    ],
+    "5.2": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-45",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-45_IS1_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-46",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-46_IS2_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-47",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-47_ES_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-48",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-48_GS1_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-49",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-49_GS2_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-50",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-50_ED_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-51",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-51_GT_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-52",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-52_RSA_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-53",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-53_OU_DUIS5.2"
+      }
+    ],
+    "5.3": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-54",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-54_IS1_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-55",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-55_IS2_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-56",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-56_ES_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-57",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-57_GS1_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-58",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-58_GS2_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-59",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-59_ED_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-60",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-60_GT_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-61",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-61_RSA_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-62",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-62_OU_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-01-63",
+        "role": "Meter Data Retriever",
+        "duisRole": "MDR",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-01-63_MDR_DUIS5.3"
+      }
+    ]
+  },
+  "SIT-B": {
+    "3.0": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-00",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-00_IS1_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-01",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-01_IS2_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-02",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-02_ES_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-03",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-03_GS1_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-04",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-04_GS2_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-05",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-05_ED_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-06",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-06_GT_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-07",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-07_RSA_DUIS3.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-08",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-08_OU_DUIS3.0"
+      }
+    ],
+    "3.1": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-09",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-09_IS1_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-10",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-10_IS2_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-11",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-11_ES_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-12",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-12_GS1_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-13",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-13_GS2_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-14",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-14_ED_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-15",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-15_GT_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-16",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-16_RSA_DUIS3.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-17",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-17_OU_DUIS3.1"
+      }
+    ],
+    "4.0": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-18",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-18_IS1_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-19",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-19_IS2_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-20",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-20_ES_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-21",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-21_GS1_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-22",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-22_GS2_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-23",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-23_ED_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-24",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-24_GT_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-25",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-25_RSA_DUIS4.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-26",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-26_OU_DUIS4.0"
+      }
+    ],
+    "5.0": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-27",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-27_IS1_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-28",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-28_IS2_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-29",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-29_ES_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-30",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-30_GS1_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-31",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-31_GS2_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-32",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-32_ED_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-33",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-33_GT_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-34",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-34_RSA_DUIS5.0"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-35",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-35_OU_DUIS5.0"
+      }
+    ],
+    "5.1": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-36",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-36_IS1_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-37",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-37_IS2_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-38",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-38_ES_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-39",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-39_GS1_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-40",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-40_GS2_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-41",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-41_ED_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-42",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-42_GT_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-43",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-43_RSA_DUIS5.1"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-44",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-44_OU_DUIS5.1"
+      }
+    ],
+    "5.2": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-45",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-45_IS1_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-46",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-46_IS2_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-47",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-47_ES_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-48",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-48_GS1_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-49",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-49_GS2_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-50",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-50_ED_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-51",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-51_GT_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-52",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-52_RSA_DUIS5.2"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-53",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-53_OU_DUIS5.2"
+      }
+    ],
+    "5.3": [
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-54",
+        "role": "Import Supplier 1",
+        "duisRole": "IS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-54_IS1_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-55",
+        "role": "Import Supplier 2",
+        "duisRole": "IS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-55_IS2_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-56",
+        "role": "Export Supplier",
+        "duisRole": "ES",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-56_ES_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-57",
+        "role": "Gas Supplier 1",
+        "duisRole": "GS1",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-57_GS1_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-58",
+        "role": "Gas Supplier 2",
+        "duisRole": "GS2",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-58_GS2_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-59",
+        "role": "Electricity Distributor",
+        "duisRole": "ED",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-59_ED_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-60",
+        "role": "Gas Transporter",
+        "duisRole": "GT",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-60_GT_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-61",
+        "role": "Registered Supplier Agent",
+        "duisRole": "RSA",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-61_RSA_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-62",
+        "role": "Other User",
+        "duisRole": "OU",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-62_OU_DUIS5.3"
+      },
+      {
+        "eui64": "70-B3-D5-1F-31-AA-02-63",
+        "role": "Meter Data Retriever",
+        "duisRole": "MDR",
+        "determinedOriginatorName": "70-B3-D5-1F-31-AA-02-63_MDR_DUIS5.3"
+      }
+    ]
+  }
+}

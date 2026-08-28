@@ -1,0 +1,202 @@
+{
+  "duisVersion": "5.1",
+  "header": {
+    "originatorName": "70-B3-D5-1F-31-AA-04-39_GS1_DUIS5.1",
+    "target": "44-11-02-00-00-2C-AF-28",
+    "sr": "1.1",
+    "srv": "1.1.1",
+    "cv": 5
+  },
+  "bodyParameters": {
+    "gasTariffElements": {
+      "switchingTable": {
+        "dayProfiles": [
+          {
+            "dayName": 1,
+            "touTariffAction": 1
+          },
+          {
+            "dayName": 2,
+            "touTariffAction": 2
+          },
+          {
+            "dayName": 3,
+            "touTariffAction": 3
+          },
+          {
+            "dayName": 4,
+            "touTariffAction": 4
+          }
+        ],
+        "weekProfiles": [
+          {
+            "weekName": 1,
+            "referencedDayName": [
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "2",
+              "2"
+            ]
+          },
+          {
+            "weekName": 2,
+            "referencedDayName": [
+              "3",
+              "3",
+              "3",
+              "3",
+              "3",
+              "4",
+              "4"
+            ]
+          }
+        ],
+        "seasons": [
+          {
+            "seasonStartDate": {
+              "year": null,
+              "month": "3",
+              "dayOfMonth": "20",
+              "dayOfWeek": null
+            },
+            "referencedWeekName": 1
+          },
+          {
+            "seasonStartDate": {
+              "year": null,
+              "month": "6",
+              "dayOfMonth": "21",
+              "dayOfWeek": null
+            },
+            "referencedWeekName": 2
+          }
+        ]
+      },
+      "specialDays": [
+        {
+          "date": {
+            "year": "2024",
+            "month": "1",
+            "dayOfMonth": "1",
+            "dayOfWeek": null
+          },
+          "referencedDayName": 2
+        },
+        {
+          "date": {
+            "year": "2024",
+            "month": "1",
+            "dayOfMonth": "2",
+            "dayOfWeek": null
+          },
+          "referencedDayName": 2
+        },
+        {
+          "date": {
+            "year": "2024",
+            "month": "3",
+            "dayOfMonth": "1",
+            "dayOfWeek": null
+          },
+          "referencedDayName": 2
+        },
+        {
+          "date": {
+            "year": "2024",
+            "month": "3",
+            "dayOfMonth": "17",
+            "dayOfWeek": null
+          },
+          "referencedDayName": 2
+        },
+        {
+          "date": {
+            "year": "2024",
+            "month": "4",
+            "dayOfMonth": "3",
+            "dayOfWeek": null
+          },
+          "referencedDayName": 2
+        },
+        {
+          "date": {
+            "year": "2024",
+            "month": "4",
+            "dayOfMonth": "6",
+            "dayOfWeek": null
+          },
+          "referencedDayName": 2
+        },
+        {
+          "date": {
+            "year": "2024",
+            "month": "4",
+            "dayOfMonth": "23",
+            "dayOfWeek": null
+          },
+          "referencedDayName": 2
+        },
+        {
+          "date": {
+            "year": "2024",
+            "month": "5",
+            "dayOfMonth": "4",
+            "dayOfWeek": null
+          },
+          "referencedDayName": 2
+        },
+        {
+          "date": {
+            "year": "2024",
+            "month": "5",
+            "dayOfMonth": "9",
+            "dayOfWeek": null
+          },
+          "referencedDayName": 2
+        },
+        {
+          "date": {
+            "year": "2024",
+            "month": "5",
+            "dayOfMonth": "25",
+            "dayOfWeek": null
+          },
+          "referencedDayName": 2
+        }
+      ],
+      "thresholdMatrix": [
+        {
+          "index": 1,
+          "value": 1
+        }
+      ]
+    },
+    "priceElements": {
+      "gasPriceElements": {
+        "currencyUnits": "GBP",
+        "standingCharge": 25000,
+        "touTariff": [
+          {
+            "index": 1,
+            "value": 9600
+          },
+          {
+            "index": 2,
+            "value": 10200
+          },
+          {
+            "index": 3,
+            "value": 11000
+          },
+          {
+            "index": 4,
+            "value": 11500
+          }
+        ]
+      }
+    }
+  }
+}

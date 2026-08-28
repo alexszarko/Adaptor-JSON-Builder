@@ -1,0 +1,217 @@
+{
+  "duisVersion": "5.1",
+  "header": {
+    "originatorName": "70-B3-D5-1F-31-AA-04-36_IS1_DUIS5.1",
+    "target": "1C-23-4F-00-00-44-0E-CB",
+    "sr": "1.1",
+    "srv": "1.1.1",
+    "cv": 5
+  },
+  "bodyParameters": {
+    "elecTariffElements": {
+      "currencyUnits": "GBP",
+      "switchingTable": {
+        "dayProfiles": [
+          {
+            "dayName": 1,
+            "profileSchedule": [
+              {
+                "startTime": "00:00:00.00Z",
+                "touTariffAction": 1
+              },
+              {
+                "startTime": "07:00:00.00Z",
+                "touTariffAction": 2
+              }
+            ]
+          },
+          {
+            "dayName": 2,
+            "profileSchedule": [
+              {
+                "startTime": "00:00:00.00Z",
+                "touTariffAction": 1
+              },
+              {
+                "startTime": "23:00:00.00Z",
+                "touTariffAction": 2
+              }
+            ]
+          },
+          {
+            "dayName": 3,
+            "profileSchedule": [
+              {
+                "startTime": "00:00:00.00Z",
+                "touTariffAction": 3
+              }
+            ]
+          }
+        ],
+        "weekProfiles": [
+          {
+            "weekName": 1,
+            "referencedDayName": [
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "1"
+            ]
+          },
+          {
+            "weekName": 2,
+            "referencedDayName": [
+              "2",
+              "2",
+              "2",
+              "2",
+              "2",
+              "1",
+              "3"
+            ]
+          }
+        ],
+        "seasons": [
+          {
+            "seasonName": "winter",
+            "seasonStartDate": {
+              "year": "2014",
+              "month": "10",
+              "dayOfMonth": "27",
+              "dayOfWeek": null
+            },
+            "referencedWeekName": 1
+          },
+          {
+            "seasonName": "summer",
+            "seasonStartDate": {
+              "year": "2015",
+              "month": "03",
+              "dayOfMonth": "29",
+              "dayOfWeek": null
+            },
+            "referencedWeekName": 2
+          }
+        ]
+      },
+      "specialDays": [
+        {
+          "date": {
+            "year": "2015",
+            "month": "05",
+            "dayOfMonth": "01",
+            "dayOfWeek": null
+          },
+          "referencedDayName": 2
+        },
+        {
+          "date": {
+            "year": null,
+            "month": "12",
+            "dayOfMonth": "25",
+            "dayOfWeek": null
+          },
+          "referencedDayName": 3
+        }
+      ],
+      "thresholdMatrix": [
+        {
+          "index": 1,
+          "blockThreshold": [
+            {
+              "index": 1,
+              "value": 4294967295
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "blockThreshold": [
+            {
+              "index": 1,
+              "value": 4294967295
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "blockThreshold": [
+            {
+              "index": 1,
+              "value": 4294967295
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "blockThreshold": [
+            {
+              "index": 1,
+              "value": 4294967295
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "blockThreshold": [
+            {
+              "index": 1,
+              "value": 4294967295
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "blockThreshold": [
+            {
+              "index": 1,
+              "value": 4294967295
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "blockThreshold": [
+            {
+              "index": 1,
+              "value": 4294967295
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "blockThreshold": [
+            {
+              "index": 1,
+              "value": 4294967295
+            }
+          ]
+        }
+      ]
+    },
+    "priceElements": {
+      "electricityPriceElements": {
+        "standingCharge": 7500,
+        "standingChargeScale": -4,
+        "priceScale": -5,
+        "touTariff": [
+          {
+            "index": 1,
+            "value": 20000
+          },
+          {
+            "index": 2,
+            "value": 25000
+          },
+          {
+            "index": 3,
+            "value": 30000
+          }
+        ]
+      }
+    }
+  }
+}

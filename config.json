@@ -1,0 +1,1797 @@
+{
+  "curlCommandTemplate": "curl -X 'POST' 'http://localhost:8027/v1/request-executor/srv/{srv}' -H 'accept: application/json' -H 'Content-Type: application/json' -d",
+  "environment": [
+    "SIT-A",
+    "SITB",
+    "UIT-A",
+    "UIT-B"
+  ],
+  "role": [
+    "Import Supplier 1",
+    "Import Supplier 2",
+    "Gas Supplier 1",
+    "Gas Supplier 2",
+    "Export Supplier",
+    "Electricity Distributor",
+    "Gas Transporter",
+    "Other User",
+    "Registered Supplier Agent",
+    "Meter Data Retriever"
+  ],
+  "duisVersion": [
+    "3.0",
+    "3.1",
+    "4.0",
+    "5.0",
+    "5.1",
+    "5.2",
+    "5.3"
+  ],
+  "serviceRequestVariant": [
+    {
+      "srv": "1.1.1",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "esme-block",
+          "label": "ESME - Block",
+          "path": "templates/1.1.1/esme-block.json"
+        },
+        {
+          "id": "esme-tou",
+          "label": "ESME - TOU",
+          "path": "templates/1.1.1/esme-tou.json"
+        },
+        {
+          "id": "gsme-tou",
+          "label": "GSME - TOU",
+          "path": "templates/1.1.1/gsme-tou.json"
+        }
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "1.1.2",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "1.2.1",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "1.2.2",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "1.5",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "1.6",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "1.7",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "2.1",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "2.2",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "2.3",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "2.5",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "3.1",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "3.2",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "3.3",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "3.4",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "3.5",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "4.1.1",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "ED",
+        "GT",
+        "MDR"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.1.2",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "ED",
+        "GT"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.1.3",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "ED"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.1.4",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.2",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "ES",
+        "ED",
+        "MDR"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.3",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.4.2",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.4.3",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.4.4",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.4.5",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.6.1",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "MDR"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.6.2",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "ES",
+        "MDR"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.8.1",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "ED",
+        "GT",
+        "OU",
+        "MDR"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.8.2",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "ED",
+        "OU"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.8.3",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "ES",
+        "ED",
+        "OU",
+        "MDR"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.10",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "ED",
+        "GT"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.11.1",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "OU"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "4.11.2",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "OU"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "4.12.1",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "ED"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.12.2",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "ES",
+        "ED"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.13",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.14",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.15",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "ED"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.16",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "ED"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "4.17",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "ED",
+        "GT",
+        "OU",
+        "MDR"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "4.18",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "5.1",
+      "commandVariants": [
+        "8"
+      ],
+      "permittedUsers": [
+        "IS",
+        "ES",
+        "GS",
+        "ED",
+        "GT",
+        "OU",
+        "MDR"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "5.2",
+      "commandVariants": [
+        "8"
+      ],
+      "permittedUsers": [
+        "IS",
+        "ES",
+        "GS",
+        "ED",
+        "GT",
+        "OU",
+        "MDR"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "5.3",
+      "commandVariants": [
+        "8"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "ED",
+        "GT",
+        "OU",
+        "MDR"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.2.1",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "RSA",
+        "ED"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.2.2",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "RSA",
+        "ED"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.2.3",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "RSA"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.2.4",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "ES",
+        "GS",
+        "RSA",
+        "ED",
+        "GT",
+        "OU"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.2.5",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "RSA"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.2.7",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "ES",
+        "GS",
+        "RSA",
+        "ED",
+        "GT",
+        "OU"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.2.8",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "GS",
+        "RSA",
+        "GT"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.2.9",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "RSA"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.2.10",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "ED"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.4.1",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "6.4.2",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "6.5",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "ED"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "6.6",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.7",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.8",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.11",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.12",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "6.13",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "RSA",
+        "ED",
+        "GT"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.14.1",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.14.2",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "6.14.3",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "6.15.1",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "ED",
+        "GT"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "6.15.2",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.17",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.18.1",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "ED"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "6.18.2",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "ED"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "6.20.1",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "6.20.2",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "ES"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "6.21",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "6.22",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "ED"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.23",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "6.24.1",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "ED",
+        "GT"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.24.2",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.25",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.26",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.27",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "ED"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "6.28",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.29",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.3",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "RSA"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.31",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "RSA"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "6.32",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "RSA"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "7.1",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "7.2",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "7.3",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "7.4",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "ES",
+        "GS",
+        "RSA",
+        "ED",
+        "GT"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "7.5",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "7.6",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "7.7",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "ED",
+        "OU"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "7.8",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "7.9",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "7.1",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "7.11",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "OU"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "7.12",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "7.13",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "7.14",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "ED",
+        "OU"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "7.15",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "ED",
+        "OU"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "7.16",
+      "commandVariants": [],
+      "permittedUsers": [],
+      "futureDated": "no"
+    },
+    {
+      "srv": "8.1.1",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "8.2",
+      "commandVariants": [
+        "8"
+      ],
+      "permittedUsers": [
+        "IS",
+        "ES",
+        "GS",
+        "RSA",
+        "ED",
+        "GT",
+        "OU",
+        "MDR"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "8.3",
+      "commandVariants": [
+        "8"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "8.4",
+      "commandVariants": [
+        "8"
+      ],
+      "permittedUsers": [
+        "IS",
+        "ES",
+        "GS",
+        "RSA",
+        "ED",
+        "GT",
+        "OU"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "8.5",
+      "commandVariants": [],
+      "permittedUsers": [
+        "DSP"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "8.6",
+      "commandVariants": [],
+      "permittedUsers": [
+        "DSP"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "8.7.1",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "8.7.2",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "OU"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "8.8.1",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "8.8.2",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "OU"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "8.9",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "OU"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "8.11",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "OU"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "8.12.1",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "8.12.2",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "8.13",
+      "commandVariants": [
+        "8"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "8.14.1",
+      "commandVariants": [
+        "8"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "8.14.2",
+      "commandVariants": [
+        "8"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "8.14.3",
+      "commandVariants": [
+        "8"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS",
+        "RSA"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "8.14.4",
+      "commandVariants": [
+        "8"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "9.1",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "OU"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "11.1",
+      "commandVariants": [
+        "8"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "11.2",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "IS",
+        "ES",
+        "GS",
+        "RSA",
+        "ED",
+        "GT",
+        "OU"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "11.3",
+      "commandVariants": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "yes"
+    },
+    {
+      "srv": "11.4",
+      "commandVariants": [
+        "8"
+      ],
+      "permittedUsers": [
+        "IS",
+        "GS"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "12.1",
+      "commandVariants": [
+        "8"
+      ],
+      "permittedUsers": [
+        "IS",
+        "ES",
+        "GS",
+        "RSA",
+        "ED",
+        "GT",
+        "OU"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "12.2",
+      "commandVariants": [
+        "8"
+      ],
+      "permittedUsers": [
+        "IS",
+        "ES",
+        "GS",
+        "RSA",
+        "ED",
+        "GT",
+        "OU"
+      ],
+      "futureDated": "no"
+    },
+    {
+      "srv": "14.1",
+      "commandVariants": [
+        "1",
+        "2",
+        "3"
+      ],
+      "permittedUsers": [
+        "GT"
+      ],
+      "futureDated": "no"
+    }
+  ],
+  "commandVariant": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+  ]
+}

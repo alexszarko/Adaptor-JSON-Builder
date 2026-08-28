@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Build an adaptor configuration by selecting an environment, role, and DUIS version.">
+  <title>Adaptor JSON Builder</title>
+  <link rel="stylesheet" href="styles.css?v=15">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="builder-card" aria-labelledby="page-title">
+      <div class="eyebrow">Configuration tool</div>
+      <div class="title-row">
+        <h1 id="page-title">Adaptor JSON Builder</h1>
+        <button id="reset-page" class="reset-button" type="button">Reset</button>
+      </div>
+      <p class="intro">Choose your configuration options below to get started.</p>
+      <form id="filter-form" class="filter-form">
+        <label class="field" for="environment"><span>Select Environment</span><span class="select-wrap"><select id="environment" name="environment"><option value="" selected>Choose an environment</option></select></span></label>
+        <label class="field" for="role"><span>Select Role</span><span class="select-wrap"><select id="role" name="role"><option value="" selected>Choose a role</option></select></span></label>
+        <label class="field" for="duis-version"><span>Select DUIS Version</span><span class="select-wrap"><select id="duis-version" name="duisVersion"><option value="" selected>Choose a DUIS version</option></select></span></label>
+        <label class="field" for="determined-originator-name">
+          <span>Determined Originator Name</span>
+          <input id="determined-originator-name" name="determinedOriginatorName" type="text" placeholder="Resolved from your selections" aria-describedby="header-selection-warning" readonly>
+          <span id="header-selection-warning" class="field-warning" role="alert" hidden></span>
+        </label>
+        <div class="field">
+          <label for="service-request-variant-input">Select Service Request Variant</label>
+          <div id="srv-combobox" class="combo">
+            <span class="select-wrap">
+              <input id="service-request-variant-input" name="serviceRequestVariant" placeholder="Type or choose an SRV" autocomplete="off" role="combobox" aria-autocomplete="list" aria-controls="service-request-variant-list" aria-expanded="false" required>
+            </span>
+            <div id="service-request-variant-list" class="combo-list" role="listbox" hidden></div>
+          </div>
+        </div>
+        <label class="field" for="payload-template">
+          <span>Select Payload Template</span>
+          <span class="select-wrap">
+            <select id="payload-template" name="payloadTemplate" required>
+              <option value="" selected>Choose a payload template</option>
+            </select>
+          </span>
+        </label>
+        <label id="future-dated-field" class="field" for="future-dated" hidden>
+          <span>Future Dated</span>
+          <input id="future-dated" type="datetime-local" step="60" aria-describedby="future-dated-formatted">
+          <input id="future-dated-value" name="futureDated" type="hidden">
+          <output id="future-dated-formatted" class="formatted-date" hidden></output>
+        </label>
+        <label class="field" for="command-variant">
+          <span>Select Command Variant</span>
+          <span class="select-wrap">
+            <select id="command-variant" name="commandVariant" aria-describedby="command-variant-warning">
+              <option value="" selected>Choose a command variant</option>
+            </select>
+          </span>
+          <span id="command-variant-warning" class="field-warning" role="alert" hidden>Please choose an SRV before choosing a Command Variant.</span>
+        </label>
+        <label class="field" for="target">
+          <span>Target</span>
+          <input id="target" name="target" type="text" placeholder="1C-23-4F-00-00-44-0E-CB" pattern="[0-9A-Fa-f]{2}(-[0-9A-Fa-f]{2}){7}" maxlength="23" title="Enter eight hexadecimal pairs separated by hyphens, for example 1C-23-4F-00-00-44-0E-CB" autocomplete="off">
+        </label>
+        <button type="submit">Continue</button>
+      </form>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+    <aside class="output-card" aria-labelledby="output-title">
+      <div class="eyebrow">Generated output</div>
+      <h2 id="output-title">Request Preview</h2>
+      <p class="output-intro">The generated curl command and request data will appear here.</p>
+
+      <section class="output-section" aria-labelledby="payload-title">
+        <div class="output-heading">
+          <h3 id="payload-title">Payload</h3>
+          <button id="copy-payload" class="copy-button" type="button" disabled>Copy</button>
+        </div>
+        <pre class="code-output"><code id="payload-output">Your generated payload will appear here.</code></pre>
+      </section>
+    </aside>
+  </main>
+  <script src="app.js?v=18"></script>
+</body>
+</html>

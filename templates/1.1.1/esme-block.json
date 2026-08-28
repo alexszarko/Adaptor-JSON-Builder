@@ -1,0 +1,398 @@
+{
+  "duisVersion": "5.1",
+  "header": {
+    "originatorName": "supplier-IS1-DUIS5.1",
+    "cv": 5,
+    "srv": "1.1.1",
+    "target": "1C-23-4F-00-00-44-0E-CB",
+    "sr": "1.1"
+  },
+  "bodyParameters": {
+    "elecTariffElements": {
+      "currencyUnits": "GBP",
+      "switchingTable": {
+        "weekProfiles": [
+          {
+            "referencedDayName": [
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "1"
+            ],
+            "weekName": 1
+          }
+        ],
+        "seasons": [
+          {
+            "referencedWeekName": 1,
+            "seasonStartDate": {
+              "dayOfWeek": null,
+              "month": "01",
+              "year": "2024",
+              "dayOfMonth": "01"
+            },
+            "seasonName": "all"
+          }
+        ],
+        "dayProfiles": [
+          {
+            "profileSchedule": [
+              {
+                "startTime": "00:00:00.00Z",
+                "blockTariffAction": 1
+              },
+              {
+                "startTime": "08:30:00.00Z",
+                "blockTariffAction": 2
+              },
+              {
+                "startTime": "09:00:00.00Z",
+                "blockTariffAction": 3
+              },
+              {
+                "startTime": "09:30:00.00Z",
+                "blockTariffAction": 4
+              },
+              {
+                "startTime": "10:00:00.00Z",
+                "blockTariffAction": 5
+              },
+              {
+                "startTime": "10:30:00.00Z",
+                "blockTariffAction": 6
+              },
+              {
+                "startTime": "11:00:00.00Z",
+                "blockTariffAction": 7
+              },
+              {
+                "startTime": "11:30:00.00Z",
+                "blockTariffAction": 8
+              }
+            ],
+            "dayName": 1
+          }
+        ]
+      },
+      "specialDays": [],
+      "thresholdMatrix": [
+        {
+          "blockThreshold": [
+            {
+              "index": 1,
+              "value": 500
+            },
+            {
+              "index": 2,
+              "value": 1000
+            },
+            {
+              "index": 3,
+              "value": 1500
+            }
+          ],
+          "index": 1
+        },
+        {
+          "blockThreshold": [
+            {
+              "index": 1,
+              "value": 500
+            },
+            {
+              "index": 2,
+              "value": 1000
+            },
+            {
+              "index": 3,
+              "value": 1500
+            }
+          ],
+          "index": 2
+        },
+        {
+          "blockThreshold": [
+            {
+              "index": 1,
+              "value": 500
+            },
+            {
+              "index": 2,
+              "value": 1000
+            },
+            {
+              "index": 3,
+              "value": 1500
+            }
+          ],
+          "index": 3
+        },
+        {
+          "blockThreshold": [
+            {
+              "index": 1,
+              "value": 500
+            },
+            {
+              "index": 2,
+              "value": 1000
+            },
+            {
+              "index": 3,
+              "value": 1500
+            }
+          ],
+          "index": 4
+        },
+        {
+          "blockThreshold": [
+            {
+              "index": 1,
+              "value": 500
+            },
+            {
+              "index": 2,
+              "value": 1000
+            },
+            {
+              "index": 3,
+              "value": 1500
+            }
+          ],
+          "index": 5
+        },
+        {
+          "blockThreshold": [
+            {
+              "index": 1,
+              "value": 500
+            },
+            {
+              "index": 2,
+              "value": 1000
+            },
+            {
+              "index": 3,
+              "value": 1500
+            }
+          ],
+          "index": 6
+        },
+        {
+          "blockThreshold": [
+            {
+              "index": 1,
+              "value": 500
+            },
+            {
+              "index": 2,
+              "value": 1000
+            },
+            {
+              "index": 3,
+              "value": 1500
+            }
+          ],
+          "index": 7
+        },
+        {
+          "blockThreshold": [
+            {
+              "index": 1,
+              "value": 500
+            },
+            {
+              "index": 2,
+              "value": 1000
+            },
+            {
+              "index": 3,
+              "value": 1500
+            }
+          ],
+          "index": 8
+        }
+      ]
+    },
+    "priceElements": {
+      "electricityPriceElements": {
+        "standingCharge": 20000,
+        "blockTariff": [
+          {
+            "blockPrice": [
+              {
+                "index": 1,
+                "value": 1000
+              },
+              {
+                "index": 2,
+                "value": 1200
+              },
+              {
+                "index": 3,
+                "value": 1400
+              },
+              {
+                "index": 4,
+                "value": 1600
+              }
+            ],
+            "index": 1
+          },
+          {
+            "blockPrice": [
+              {
+                "index": 1,
+                "value": 2000
+              },
+              {
+                "index": 2,
+                "value": 2200
+              },
+              {
+                "index": 3,
+                "value": 2400
+              },
+              {
+                "index": 4,
+                "value": 2600
+              }
+            ],
+            "index": 2
+          },
+          {
+            "blockPrice": [
+              {
+                "index": 1,
+                "value": 3000
+              },
+              {
+                "index": 2,
+                "value": 3200
+              },
+              {
+                "index": 3,
+                "value": 3400
+              },
+              {
+                "index": 4,
+                "value": 3600
+              }
+            ],
+            "index": 3
+          },
+          {
+            "blockPrice": [
+              {
+                "index": 1,
+                "value": 4000
+              },
+              {
+                "index": 2,
+                "value": 4200
+              },
+              {
+                "index": 3,
+                "value": 4400
+              },
+              {
+                "index": 4,
+                "value": 4600
+              }
+            ],
+            "index": 4
+          },
+          {
+            "blockPrice": [
+              {
+                "index": 1,
+                "value": 5000
+              },
+              {
+                "index": 2,
+                "value": 5200
+              },
+              {
+                "index": 3,
+                "value": 5400
+              },
+              {
+                "index": 4,
+                "value": 5600
+              }
+            ],
+            "index": 5
+          },
+          {
+            "blockPrice": [
+              {
+                "index": 1,
+                "value": 6000
+              },
+              {
+                "index": 2,
+                "value": 6200
+              },
+              {
+                "index": 3,
+                "value": 6400
+              },
+              {
+                "index": 4,
+                "value": 6600
+              }
+            ],
+            "index": 6
+          },
+          {
+            "blockPrice": [
+              {
+                "index": 1,
+                "value": 7000
+              },
+              {
+                "index": 2,
+                "value": 7200
+              },
+              {
+                "index": 3,
+                "value": 7400
+              },
+              {
+                "index": 4,
+                "value": 7600
+              }
+            ],
+            "index": 7
+          },
+          {
+            "blockPrice": [
+              {
+                "index": 1,
+                "value": 8000
+              },
+              {
+                "index": 2,
+                "value": 8200
+              },
+              {
+                "index": 3,
+                "value": 8400
+              },
+              {
+                "index": 4,
+                "value": 8600
+              }
+            ],
+            "index": 8
+          }
+        ],
+        "standingChargeScale": -5,
+        "priceScale": -4
+      }
+    }
+  }
+}

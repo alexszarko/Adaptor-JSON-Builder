@@ -1,0 +1,29 @@
+curl -X 'POST' 'http://localhost:8027/v1/request-executor/srv/1.2.1' -H "accept: application/json" -H "Content-Type: application/json" -d '{
+  "duisVersion" : "5.1",
+  "header" : {
+    "originatorName" : "70-B3-D5-1F-31-AA-04-36_IS1_DUIS5.1",
+    "target" : "1C-23-4F-00-00-44-0E-CB",
+    "sr" : "1.2",
+    "srv" : "1.2.1",
+    "cv" : 7
+  },
+  "bodyParameters" : {
+    "priceElements" : {
+      "electricityPriceElements" : {
+        "standingCharge" : 20000,
+        "standingChargeScale" : -5,
+        "priceScale" : -5,
+        "touTariff" : [ {
+          "index" : 1,
+          "value" : 3221
+        }, {
+          "index" : 2,
+          "value" : 4327
+        }, {
+          "index" : 3,
+          "value" : 5744
+        } ]
+      }
+    }
+  }
+}'
