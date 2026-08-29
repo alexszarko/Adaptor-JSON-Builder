@@ -139,6 +139,33 @@ button:hover { background: #0d6254; }
 button:active { transform: translateY(1px); }
 button:focus-visible { outline: 4px solid rgba(22, 133, 113, .22); outline-offset: 2px; }
 .status { min-height: 1.5em; margin: 20px 0 0; color: #147565; font-size: .9rem; font-weight: 650; text-align: center; }
+.missing-templates {
+  margin-top: 28px;
+  padding: 18px;
+  background: #fff8e8;
+  border: 1px solid #ead7a4;
+  border-radius: 12px;
+}
+.missing-templates h2 { margin: 0 0 13px; color: #6f5210; font-size: 1rem; }
+.missing-templates ul {
+  display: flex;
+  max-height: 190px;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+.missing-templates li {
+  padding: 5px 9px;
+  color: #6f5210;
+  background: #fff;
+  border: 1px solid #e6d5a9;
+  border-radius: 7px;
+  font: 650 .78rem/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+.missing-templates .missing-templates-empty { font-family: inherit; }
 .field-warning {
   padding: 9px 12px;
   color: #8c3d08;

@@ -1,0 +1,13 @@
+{
+  "duisVersion": "5.1",
+  "header": {
+    "originatorName": "supplier-IS1-DUIS5.1",
+    "target": "1C-23-4F-00-00-44-0E-CB",
+    "sr": "3.1",
+    "srv": "3.1",
+    "cv": 1
+  },
+  "bodyParameters": {
+    "supplierMessage": "DSP Future Date Test"
+  }
+}

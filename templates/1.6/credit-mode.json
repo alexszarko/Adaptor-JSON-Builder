@@ -1,0 +1,13 @@
+{
+  "duisVersion": "5.1",
+  "header": {
+    "originatorName": "70-B3-D5-1F-31-AA-04-36_IS1_DUIS5.1",
+    "target": "1C-23-4F-00-00-44-0E-CB",
+    "sr": "1.6",
+    "srv": "1.6",
+    "cv": 5
+  },
+  "bodyParameters": {
+    "credit": true
+  }
+}

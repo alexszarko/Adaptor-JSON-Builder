@@ -8,6 +8,14 @@ TEMPLATES = {
     Path("JSONs/1.1.1/ESME/Block/1.1.1 - ESME - Block"): Path("templates/1.1.1/esme-block.json"),
     Path("JSONs/1.1.1/ESME/TOU/1.1.1 - ESME - TOU"): Path("templates/1.1.1/esme-tou.json"),
     Path("JSONs/1.1.1/GSME/TOU/1.1.1 - GSME - TOU"): Path("templates/1.1.1/gsme-tou.json"),
+    Path("JSONs/1.6/1.6 - Credit Mode"): Path("templates/1.6/credit-mode.json"),
+    Path("JSONs/1.6/1.6 - Prepay Mode"): Path("templates/1.6/prepay-mode.json"),
+    Path("JSONs/2.2/2.2"): Path("templates/2.2/default.json"),
+    Path("JSONs/3.1/3.1"): Path("templates/3.1/default.json"),
+    Path("JSONs/4.1.1/4.1.1"): Path("templates/4.1.1/default.json"),
+    Path("JSONs/4.1.3/4.1.3"): Path("templates/4.1.3/default.json"),
+    Path("JSONs/4.4.2/4.4.2"): Path("templates/4.4.2/default.json"),
+    Path("JSONs/4.6.1/4.6.1"): Path("templates/4.6.1/default.json"),
 }
 
 

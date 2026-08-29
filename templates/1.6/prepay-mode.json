@@ -1,0 +1,19 @@
+{
+  "duisVersion": "4.0",
+  "header": {
+    "originatorName": "supplier1",
+    "target": "00-DB-12-34-56-78-90-A0",
+    "originatorCounter": 1011,
+    "sr": "1.6",
+    "srv": "1.6",
+    "cv": 4
+  },
+  "bodyParameters": {
+    "executionDateTime": "2030-01-15T09:00:00.00Z",
+    "prepayment": {
+      "suspendDebtDisabled": true,
+      "suspendDebtEmergency": false,
+      "disablementThreshold": 556677
+    }
+  }
+}

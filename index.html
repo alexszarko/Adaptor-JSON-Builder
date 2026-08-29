@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Build an adaptor configuration by selecting an environment, role, and DUIS version.">
   <title>Adaptor JSON Builder</title>
-  <link rel="stylesheet" href="styles.css?v=15">
+  <link rel="stylesheet" href="styles.css?v=16">
 </head>
 <body>
   <main class="page-shell">
@@ -64,6 +64,10 @@
         <button type="submit">Continue</button>
       </form>
       <p id="status" class="status" role="status" aria-live="polite"></p>
+      <section class="missing-templates" aria-labelledby="missing-templates-title">
+        <h2 id="missing-templates-title">SRVs no available templates</h2>
+        <ul id="missing-template-srvs" aria-live="polite"></ul>
+      </section>
     </section>
     <aside class="output-card" aria-labelledby="output-title">
       <div class="eyebrow">Generated output</div>
@@ -79,6 +83,6 @@
       </section>
     </aside>
   </main>
-  <script src="app.js?v=18"></script>
+  <script src="app.js?v=20"></script>
 </body>
 </html>

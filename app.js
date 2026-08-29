@@ -44,12 +44,36 @@ async function loadFilterOptions() {
     if (!Array.isArray(filterOptions.serviceRequestVariant)) {
       throw new Error("Configuration value for service-request-variant must be an array");
     }
+    renderMissingTemplateSrvs(filterOptions.serviceRequestVariant);
     initialiseSrvCombobox(filterOptions.serviceRequestVariant, filterOptions.role);
     initialiseOriginatorLookup(environmentSetup);
     initialisePayloadPreview(filterOptions.serviceRequestVariant, filterOptions.curlCommandTemplate);
   } catch (error) {
     console.error(error);
     status.textContent = "Unable to load the filter configuration.";
+  }
+}
+
+function renderMissingTemplateSrvs(serviceRequestVariants) {
+  const list = document.getElementById("missing-template-srvs");
+  const missingSrvs = [...new Set(
+    serviceRequestVariants
+      .filter((option) => typeof option === "object" && !(option.payloadTemplates?.length > 0))
+      .map((option) => option.srv),
+  )];
+
+  list.replaceChildren();
+  for (const srv of missingSrvs) {
+    const item = document.createElement("li");
+    item.textContent = srv;
+    list.append(item);
+  }
+
+  if (!missingSrvs.length) {
+    const item = document.createElement("li");
+    item.className = "missing-templates-empty";
+    item.textContent = "All configured SRVs have templates.";
+    list.append(item);
   }
 }
 
@@ -417,8 +441,29 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
     }
   });
 
-  targetInput.addEventListener("input", () => {
-    targetInput.value = targetInput.value.toUpperCase();
+  targetInput.addEventListener("input", (event) => {
+    const cursorPosition = targetInput.selectionStart ?? targetInput.value.length;
+    const hexadecimalBeforeCursor = targetInput.value
+      .slice(0, cursorPosition)
+      .replace(/[^0-9a-f]/gi, "").length;
+    const hexadecimal = targetInput.value
+      .replace(/[^0-9a-f]/gi, "")
+      .slice(0, 16)
+      .toUpperCase();
+    const pairs = hexadecimal.match(/.{1,2}/g) ?? [];
+    const addTrailingHyphen = hexadecimal.length > 0
+      && hexadecimal.length < 16
+      && hexadecimal.length % 2 === 0
+      && !event.inputType?.startsWith("delete");
+
+    targetInput.value = `${pairs.join("-")}${addTrailingHyphen ? "-" : ""}`;
+
+    const pairsBeforeCursor = Math.floor(hexadecimalBeforeCursor / 2);
+    const formattedCursorPosition = Math.min(
+      hexadecimalBeforeCursor + pairsBeforeCursor,
+      targetInput.value.length,
+    );
+    targetInput.setSelectionRange(formattedCursorPosition, formattedCursorPosition);
   });
 
   for (const select of [environmentSelect, roleSelect, versionSelect]) {
