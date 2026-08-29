@@ -84,6 +84,18 @@
         "IS",
         "GS"
       ],
+	  "payloadTemplates": [
+        {
+          "id": "esme-tou",
+          "label": "ESME - TOU",
+          "path": "templates/1.2.1/esme-tou.json"
+        },
+        {
+          "id": "gsme-tou",
+          "label": "GSME - TOU",
+          "path": "templates/1.2.1/gsme-tou.json"
+        }
+      ],
       "futureDated": "yes"
     },
     {
