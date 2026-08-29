@@ -123,6 +123,28 @@
         "IS",
         "GS"
       ],
+      "payloadTemplates": [
+        {
+          "id": "adjust-meter-balance-credit",
+          "label": "Adjust Meter Balance - Credit",
+          "path": "templates/1.5/adjust-meter-balance-credit.json"
+        },
+        {
+          "id": "adjust-meter-balance-prepayment",
+          "label": "Adjust Meter Balance - Prepayment",
+          "path": "templates/1.5/adjust-meter-balance-prepayment.json"
+        },
+        {
+          "id": "reset-meter-balance-credit",
+          "label": "Reset Meter Balance - Credit",
+          "path": "templates/1.5/reset-meter-balance-credit.json"
+        },
+        {
+          "id": "reset-meter-balance-prepayment",
+          "label": "Reset Meter Balance - Prepayment",
+          "path": "templates/1.5/reset-meter-balance-prepayment.json"
+        }
+      ],
       "futureDated": "no"
     },
     {

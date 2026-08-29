@@ -1,0 +1,15 @@
+{
+  "duisVersion": "5.1",
+  "header": {
+    "originatorName": "supplier-IS1-DUIS5.1",
+    "target": "1C-23-4F-00-00-44-0E-CB",
+    "sr": "1.5",
+    "srv": "1.5",
+    "cv": 5
+  },
+  "bodyParameters": {
+    "creditMode": {
+      "adjustMeterBalance": -100000
+    }
+  }
+}
