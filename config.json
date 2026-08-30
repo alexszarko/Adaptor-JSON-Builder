@@ -508,6 +508,13 @@
         "ES",
         "MDR"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/4.6.2/default.json"
+        }
+      ],
       "futureDated": "yes"
     },
     {
@@ -524,6 +531,13 @@
         "GT",
         "OU",
         "MDR"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/4.8.1/default.json"
+        }
       ],
       "futureDated": "yes"
     },
@@ -582,6 +596,13 @@
         "IS",
         "GS",
         "OU"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/4.11.1/default.json"
+        }
       ],
       "futureDated": "no"
     },
@@ -648,6 +669,13 @@
         "IS",
         "GS"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/4.14/default.json"
+        }
+      ],
       "futureDated": "yes"
     },
     {
@@ -690,6 +718,13 @@
         "GT",
         "OU",
         "MDR"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/4.17/default.json"
+        }
       ],
       "futureDated": "yes"
     },
@@ -736,6 +771,18 @@
         "OU",
         "MDR"
       ],
+      "payloadTemplates": [
+        {
+          "id": "by-device-id",
+          "label": "By Device ID",
+          "path": "templates/5.2/by-device-id.json"
+        },
+        {
+          "id": "by-dsp-schedule-id",
+          "label": "By DSP Schedule ID",
+          "path": "templates/5.2/by-dsp-schedule-id.json"
+        }
+      ],
       "futureDated": "no"
     },
     {
@@ -765,6 +812,13 @@
         "RSA",
         "ED"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.2.1/default.json"
+        }
+      ],
       "futureDated": "no"
     },
     {
@@ -779,6 +833,13 @@
         "RSA",
         "ED"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.2.2/default.json"
+        }
+      ],
       "futureDated": "no"
     },
     {
@@ -792,6 +853,13 @@
         "IS",
         "GS",
         "RSA"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.2.3/default.json"
+        }
       ],
       "futureDated": "no"
     },
@@ -811,6 +879,13 @@
         "GT",
         "OU"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.2.4/default.json"
+        }
+      ],
       "futureDated": "no"
     },
     {
@@ -823,6 +898,13 @@
       "permittedUsers": [
         "IS",
         "RSA"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.2.5/default.json"
+        }
       ],
       "futureDated": "no"
     },
@@ -842,6 +924,13 @@
         "GT",
         "OU"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.2.7/default.json"
+        }
+      ],
       "futureDated": "no"
     },
     {
@@ -856,6 +945,13 @@
         "RSA",
         "GT"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.2.8/default.json"
+        }
+      ],
       "futureDated": "no"
     },
     {
@@ -869,6 +965,13 @@
         "IS",
         "GS",
         "RSA"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.2.9/default.json"
+        }
       ],
       "futureDated": "no"
     },
@@ -934,6 +1037,13 @@
       "permittedUsers": [
         "GS"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.6/default.json"
+        }
+      ],
       "futureDated": "no"
     },
     {
@@ -946,6 +1056,13 @@
       ],
       "permittedUsers": [
         "GS"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.7/default.json"
+        }
       ],
       "futureDated": "no"
     },
@@ -974,6 +1091,13 @@
       "permittedUsers": [
         "IS",
         "GS"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.11/default.json"
+        }
       ],
       "futureDated": "no"
     },
@@ -1123,6 +1247,18 @@
         "IS",
         "GS"
       ],
+      "payloadTemplates": [
+        {
+          "id": "electricity-import-mpan",
+          "label": "Electricity Import MPAN",
+          "path": "templates/6.20.1/electricity-import-mpan.json"
+        },
+        {
+          "id": "gas-mprn",
+          "label": "Gas MPRN",
+          "path": "templates/6.20.1/gas-mprn.json"
+        }
+      ],
       "futureDated": "yes"
     },
     {
@@ -1134,6 +1270,13 @@
       ],
       "permittedUsers": [
         "ES"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.20.2/default.json"
+        }
       ],
       "futureDated": "yes"
     },
@@ -1190,6 +1333,13 @@
         "ED",
         "GT"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.24.1/default.json"
+        }
+      ],
       "futureDated": "no"
     },
     {
@@ -1229,6 +1379,13 @@
       ],
       "permittedUsers": [
         "IS"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.26/default.json"
+        }
       ],
       "futureDated": "no"
     },
@@ -1533,6 +1690,13 @@
         "IS",
         "GS"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/8.1.1/default.json"
+        }
+      ],
       "futureDated": "no"
     },
     {
@@ -1607,6 +1771,13 @@
         "IS",
         "GS"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/8.7.1/default.json"
+        }
+      ],
       "futureDated": "no"
     },
     {
@@ -1620,6 +1791,13 @@
         "IS",
         "GS",
         "OU"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/8.7.2/default.json"
+        }
       ],
       "futureDated": "no"
     },
@@ -1663,6 +1841,18 @@
         "GS",
         "OU"
       ],
+      "payloadTemplates": [
+        {
+          "id": "with-read-security-details",
+          "label": "With Read Security Details",
+          "path": "templates/8.9/with-read-security-details.json"
+        },
+        {
+          "id": "without-read-security-details",
+          "label": "Without Read Security Details",
+          "path": "templates/8.9/without-read-security-details.json"
+        }
+      ],
       "futureDated": "yes"
     },
     {
@@ -1676,6 +1866,18 @@
         "IS",
         "GS",
         "OU"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "add",
+          "label": "Add",
+          "path": "templates/8.11/add.json"
+        },
+        {
+          "id": "remove",
+          "label": "Remove",
+          "path": "templates/8.11/remove.json"
+        }
       ],
       "futureDated": "yes"
     },
@@ -1799,6 +2001,13 @@
         "ED",
         "GT",
         "OU"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/11.2/default.json"
+        }
       ],
       "futureDated": "yes"
     },

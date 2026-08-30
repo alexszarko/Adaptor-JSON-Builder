@@ -1,0 +1,14 @@
+{
+  "duisVersion": "5.2",
+  "header": {
+    "originatorName": "supplier-GS1-DUIS5.2",
+    "target": "90-4D-C3-00-00-10-45-DC",
+    "sr": "8.1",
+    "srv": "8.1.1",
+    "cv": 5
+  },
+  "bodyParameters": {
+    "currentDateTime": "${dateTime()}",
+    "tolerancePeriod": 86400
+  }
+}

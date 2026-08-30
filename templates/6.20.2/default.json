@@ -1,0 +1,13 @@
+{
+  "duisVersion": "5.1",
+  "header": {
+    "originatorName": "supplier-ES-DUIS5.1",
+    "target": "1C-23-4F-00-00-18-DA-8B",
+    "sr": "6.20",
+    "srv": "6.20.2",
+    "cv": 1
+  },
+  "bodyParameters": {
+    "exportMpan": "1591059061545"
+  }
+}

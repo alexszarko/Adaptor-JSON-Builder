@@ -1,0 +1,13 @@
+curl -X 'POST' 'http://localhost:8027/v1/request-executor/srv/6.26' -H 'accept: application/json' -H 'Content-Type: application/json' -d '{
+  "duisVersion" : "5.1",
+  "header" : {
+    "originatorName" : "supplier-IS1-DUIS5.1",
+    "target" : "supplier-IS1-DUIS5.1",
+    "sr" : "6.26",
+    "srv" : "6.26",
+    "cv" : 4
+  },
+  "bodyParameters" : {
+    "dailyTariffBlockCounterMatrixReset" : true
+  }
+}'

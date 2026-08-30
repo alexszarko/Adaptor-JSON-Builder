@@ -1,0 +1,20 @@
+curl -X 'POST' 'http://localhost:8027/v1/request-executor/srv/4.14' -H 'accept: application/json' -H 'Content-Type: application/json' -d '
+{
+  "duisVersion" : "5.3",
+  "header" :
+  {
+    "originatorName" : "supplier-IS2-DUIS5.3",
+    "target" : "98-B1-77-FF-FF-50-DE-D7",
+    "sr" : "4.14",
+    "srv" : "4.14",
+    "cv" : 1
+  },
+  "bodyParameters" :
+  {
+    "readLogPeriod" :
+    {
+      "startDateTime" : "2025-01-12T23:30:00.00Z",
+      "endDateTime" : "2025-01-14T00:05:00.00Z"
+    }
+  }
+}'

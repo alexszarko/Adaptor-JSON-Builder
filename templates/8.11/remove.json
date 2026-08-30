@@ -1,0 +1,14 @@
+{
+  "duisVersion": "5.1",
+  "header": {
+    "originatorName": "70-B3-D5-1F-31-AA-04-36_IS1_DUIS5.1",
+    "target": "00-0B-6B-64-1F-00-01-2B",
+    "sr": "8.11",
+    "srv": "8.11",
+    "cv": 3
+  },
+  "bodyParameters": {
+    "deviceId": "0C-A2-F4-00-00-A4-85-80",
+    "requestType": "Remove"
+  }
+}

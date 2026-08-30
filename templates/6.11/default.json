@@ -1,0 +1,14 @@
+{
+  "duisVersion": "5.1",
+  "header": {
+    "originatorName": "supplier-IS1-DUIS5.1",
+    "target": "1C-23-4F-00-00-18-DA-8B",
+    "sr": "6.11",
+    "srv": "6.11",
+    "cv": 5
+  },
+  "bodyParameters": {
+    "currentDateTime": "2014-12-31T23:59:10.00Z",
+    "tolerancePeriod": 86400
+  }
+}

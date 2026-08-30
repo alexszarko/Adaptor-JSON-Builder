@@ -1,0 +1,16 @@
+{
+  "duisVersion": "5.1",
+  "header": {
+    "originatorName": "70-B3-D5-1F-31-AA-04-36_IS1_DUIS5.1",
+    "target": "1C-23-4F-00-00-44-0E-CB",
+    "sr": "4.17",
+    "srv": "4.17",
+    "cv": 3
+  },
+  "bodyParameters": {
+    "readLogPeriod": {
+      "startDateTime": "2026-07-19T23:55:00.00Z",
+      "endDateTime": "2026-07-20T00:05:00.00Z"
+    }
+  }
+}

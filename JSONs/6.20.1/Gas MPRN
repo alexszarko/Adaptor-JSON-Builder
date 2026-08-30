@@ -1,0 +1,13 @@
+curl -X 'POST' 'http://localhost:8027/v1/request-executor/srv/6.20.1' -H "accept: application/json" -H "Content-Type: application/json" -d '{
+"duisVersion" : "5.1",
+"header" : {
+"originatorName" : "supplier-GS1-DUIS5.1",
+"target" : "44-11-02-00-00-2C-AF-28",
+"sr" : "6.20",
+"srv" : "6.20.1",
+"cv" : 1
+},
+"bodyParameters" : {
+"importMprn" : "1007686610" 
+}
+}'

@@ -292,6 +292,8 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
   const form = document.getElementById("filter-form");
   const srvInput = document.getElementById("service-request-variant-input");
   const templateSelect = document.getElementById("payload-template");
+  const remotePartyRoleField = document.getElementById("remote-party-role-field");
+  const remotePartyRoleInputs = [...remotePartyRoleField.querySelectorAll("input[type=checkbox]")];
   const futureDatedField = document.getElementById("future-dated-field");
   const futureDatedInput = document.getElementById("future-dated");
   const futureDatedValue = document.getElementById("future-dated-value");
@@ -331,6 +333,19 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
     }
   }
 
+  function remotePartyRolesAvailable() {
+    return srvInput.value === "6.24.1"
+      && templateSelect.value === "templates/6.24.1/default.json";
+  }
+
+  function updateRemotePartyRoleVisibility() {
+    const isAvailable = remotePartyRolesAvailable();
+    remotePartyRoleField.hidden = !isAvailable;
+    if (!isAvailable) {
+      for (const input of remotePartyRoleInputs) input.checked = false;
+    }
+  }
+
   function renderPayload(payload) {
     const payloadText = JSON.stringify(payload, null, 2);
     const shellPayload = payloadText.replaceAll("'", String.raw`'\''`);
@@ -361,7 +376,9 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
       templateSelect.append(option);
     }
 
-    if (!srvChanged && templates.some((template) => template.path === selectedTemplate)) {
+    if (templates.length === 1) {
+      templateSelect.value = templates[0].path;
+    } else if (!srvChanged && templates.some((template) => template.path === selectedTemplate)) {
       templateSelect.value = selectedTemplate;
     }
     if (srvChanged) {
@@ -370,10 +387,14 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
       payloadOutput.textContent = "Your generated payload will appear here.";
     }
     updateFutureDatedVisibility();
+    updateRemotePartyRoleVisibility();
   }
 
   srvInput.addEventListener("srvchange", updateTemplates);
-  templateSelect.addEventListener("change", updateFutureDatedVisibility);
+  templateSelect.addEventListener("change", () => {
+    updateFutureDatedVisibility();
+    updateRemotePartyRoleVisibility();
+  });
   futureDatedInput.addEventListener("change", () => {
     const formattedValue = futureDatedInput.value
       ? `${futureDatedInput.value}:00.00Z`
@@ -386,6 +407,10 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
   form.addEventListener("submit", async (event) => {
     if (event.defaultPrevented) return;
     event.preventDefault();
+
+    const selectedRemotePartyRoles = remotePartyRoleInputs
+      .filter((input) => input.checked)
+      .map((input) => input.value);
 
     const headerSelectionCount = [
       environmentSelect.value,
@@ -405,6 +430,18 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
 
       loadedPayload = await response.json();
       let appliedSelections = false;
+      if (["6.11", "8.1.1"].includes(srvInput.value)) {
+        loadedPayload.bodyParameters ??= {};
+        loadedPayload.bodyParameters.currentDateTime = new Date()
+          .toISOString()
+          .replace(/\.\d{3}Z$/, ".00Z");
+        appliedSelections = true;
+      }
+      if (remotePartyRolesAvailable() && selectedRemotePartyRoles.length) {
+        loadedPayload.bodyParameters ??= {};
+        loadedPayload.bodyParameters.remotePartyRole = selectedRemotePartyRoles;
+        appliedSelections = true;
+      }
       if (versionSelect.value && originatorInput.value) {
         loadedPayload.duisVersion = versionSelect.value;
         loadedPayload.header.originatorName = originatorInput.value;

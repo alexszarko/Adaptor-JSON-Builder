@@ -1,0 +1,17 @@
+{
+  "duisVersion": "5.1",
+  "header": {
+    "originatorName": "supplier-GS1-DUIS5.1",
+    "target": "44-11-02-00-00-2C-AF-28",
+    "sr": "6.7",
+    "srv": "6.7",
+    "cv": 5
+  },
+  "bodyParameters": {
+    "uncontrolledGasFlowRateDecimal": 6.16,
+    "supplyDepletionState": "Unchanged",
+    "supplyTamperState": "Unchanged",
+    "stabilisationPeriod": 60,
+    "measurementPeriod": 300
+  }
+}
