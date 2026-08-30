@@ -296,6 +296,8 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
   const remotePartyRoleInputs = [...remotePartyRoleField.querySelectorAll("input[type=checkbox]")];
   const credentialTypeField = document.getElementById("credential-type-field");
   const credentialTypeInputs = [...credentialTypeField.querySelectorAll("input[type=checkbox]")];
+  const esmeEventLogTypeField = document.getElementById("esme-event-log-type-field");
+  const esmeEventLogTypeInputs = [...esmeEventLogTypeField.querySelectorAll("input[type=radio]")];
   const futureDatedField = document.getElementById("future-dated-field");
   const futureDatedInput = document.getElementById("future-dated");
   const futureDatedValue = document.getElementById("future-dated-value");
@@ -358,6 +360,21 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
     credentialTypeField.hidden = !isAvailable;
     if (!isAvailable) {
       for (const input of credentialTypeInputs) input.checked = false;
+    }
+  }
+
+  function esmeEventLogTypesAvailable() {
+    return srvInput.value === "3.3"
+      && templateSelect.value === "templates/3.3/default.json";
+  }
+
+  function updateEsmeEventLogTypeVisibility() {
+    const isAvailable = esmeEventLogTypesAvailable();
+    esmeEventLogTypeField.hidden = !isAvailable;
+    if (isAvailable && !esmeEventLogTypeInputs.some((input) => input.checked)) {
+      esmeEventLogTypeInputs[0].checked = true;
+    } else if (!isAvailable) {
+      for (const input of esmeEventLogTypeInputs) input.checked = false;
     }
   }
 
@@ -469,6 +486,7 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
     updateFutureDatedVisibility();
     updateRemotePartyRoleVisibility();
     updateCredentialTypeVisibility();
+    updateEsmeEventLogTypeVisibility();
   }
 
   srvInput.addEventListener("srvchange", updateTemplates);
@@ -479,6 +497,7 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
     updateFutureDatedVisibility();
     updateRemotePartyRoleVisibility();
     updateCredentialTypeVisibility();
+    updateEsmeEventLogTypeVisibility();
   });
   futureDatedInput.addEventListener("change", () => {
     const formattedValue = futureDatedInput.value
@@ -499,6 +518,8 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
     const selectedCredentialTypes = credentialTypeInputs
       .filter((input) => input.checked)
       .map((input) => input.value);
+    const selectedEsmeEventLogType = esmeEventLogTypeInputs
+      .find((input) => input.checked)?.value;
 
     const headerSelectionCount = [
       environmentSelect.value,
@@ -532,6 +553,11 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
       if (credentialTypesAvailable() && selectedCredentialTypes.length) {
         loadedPayload.bodyParameters ??= {};
         loadedPayload.bodyParameters.credentialType = selectedCredentialTypes;
+        appliedSelections = true;
+      }
+      if (esmeEventLogTypesAvailable() && selectedEsmeEventLogType) {
+        loadedPayload.bodyParameters ??= {};
+        loadedPayload.bodyParameters.esmeEventLogType = selectedEsmeEventLogType;
         appliedSelections = true;
       }
       if (versionSelect.value && originatorInput.value) {

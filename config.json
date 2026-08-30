@@ -184,6 +184,13 @@
       "permittedUsers": [
         "IS"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/1.7/default.json"
+        }
+      ],
       "futureDated": "no"
     },
     {
@@ -292,6 +299,13 @@
         "IS",
         "GS"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/3.3/default.json"
+        }
+      ],
       "futureDated": "no"
     },
     {
@@ -305,6 +319,13 @@
         "IS",
         "GS"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/3.4/default.json"
+        }
+      ],
       "futureDated": "yes"
     },
     {
@@ -317,6 +338,13 @@
       "permittedUsers": [
         "IS",
         "GS"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/3.5/default.json"
+        }
       ],
       "futureDated": "no"
     },
@@ -797,6 +825,18 @@
         "GT",
         "OU",
         "MDR"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "by-device-id",
+          "label": "By Device ID",
+          "path": "templates/5.3/by-device-id.json"
+        },
+        {
+          "id": "by-dsp-schedule-id",
+          "label": "By DSP Schedule ID",
+          "path": "templates/5.3/by-dsp-schedule-id.json"
+        }
       ],
       "futureDated": "no"
     },

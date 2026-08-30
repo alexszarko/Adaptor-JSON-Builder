@@ -1,0 +1,13 @@
+curl -X 'POST' 'http://localhost:8027/v1/request-executor/srv/5.2' -H 'accept: application/json' -H 'Content-Type: application/json' -d '{
+  "duisVersion" : "5.1",
+  "header" : {
+    "originatorName" : "supplier-IS1-DUIS5.1",
+    "target" : "70-B3-D5-1F-30-00-18-01",
+    "sr" : "5.3",
+    "srv" : "5.3",
+    "cv" : 8
+  },
+  "bodyParameters" : {
+     "deviceId" : "B8-79-7E-FF-00-00-11-2F"
+  }
+}'

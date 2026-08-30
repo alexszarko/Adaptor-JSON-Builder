@@ -65,6 +65,13 @@
             <label><input type="checkbox" name="credentialType" value="Key Agreement"> Key Agreement</label>
           </div>
         </fieldset>
+        <fieldset id="esme-event-log-type-field" class="field checkbox-field" hidden>
+          <legend>ESME Event Log Type</legend>
+          <div class="checkbox-options">
+            <label><input type="radio" name="esmeEventLogType" value="ESME"> ESME</label>
+            <label><input type="radio" name="esmeEventLogType" value="ALCS"> ALCS</label>
+          </div>
+        </fieldset>
         <label id="future-dated-field" class="field" for="future-dated" hidden>
           <span>Future Dated</span>
           <input id="future-dated" type="datetime-local" step="60" aria-describedby="future-dated-formatted">
@@ -102,6 +109,6 @@
       </section>
     </aside>
   </main>
-  <script src="app.js?v=27"></script>
+  <script src="app.js?v=28"></script>
 </body>
 </html>

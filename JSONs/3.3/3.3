@@ -1,0 +1,14 @@
+curl -X 'POST' 'http://localhost:8027/v1/request-executor/srv/3.3' -H 'accept: application/json' -H 'Content-Type: application/json' -d '{
+  "duisVersion": "4.0",
+  "header": {
+    "originatorName": "supplier1",
+    "target": "00-DB-12-34-56-78-90-A0",
+    "originatorCounter": 1000,
+    "sr": "3.3",
+    "srv": "3.3",
+    "cv": 1
+  },
+  "bodyParameters": {
+    "esmeEventLogType": "ESME"
+  }
+}'
