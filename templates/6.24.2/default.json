@@ -1,0 +1,13 @@
+{
+  "duisVersion": "5.0",
+  "header": {
+    "originatorName": "70-B3-D5-1F-31-AA-03-31_GS2_DUIS5.0",
+    "target": "E4-FE-D9-00-02-63-2E-74",
+    "sr": "6.24",
+    "srv": "6.24.2",
+    "cv": 5
+  },
+  "bodyParameters": {
+    "credentialType": "Digital Signature"
+  }
+}

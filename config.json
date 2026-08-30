@@ -1354,6 +1354,13 @@
         "IS",
         "GS"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.24.2/default.json"
+        }
+      ],
       "futureDated": "no"
     },
     {
@@ -1713,6 +1720,23 @@
         "GT",
         "OU",
         "MDR"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "by-device-id",
+          "label": "By Device ID",
+          "path": "templates/8.2/by-device-id.json"
+        },
+        {
+          "id": "by-mpxn",
+          "label": "By MPXN",
+          "path": "templates/8.2/by-mpxn.json"
+        },
+        {
+          "id": "by-uprn",
+          "label": "By UPRN",
+          "path": "templates/8.2/by-uprn.json"
+        }
       ],
       "futureDated": "no"
     },

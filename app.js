@@ -294,6 +294,8 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
   const templateSelect = document.getElementById("payload-template");
   const remotePartyRoleField = document.getElementById("remote-party-role-field");
   const remotePartyRoleInputs = [...remotePartyRoleField.querySelectorAll("input[type=checkbox]")];
+  const credentialTypeField = document.getElementById("credential-type-field");
+  const credentialTypeInputs = [...credentialTypeField.querySelectorAll("input[type=checkbox]")];
   const futureDatedField = document.getElementById("future-dated-field");
   const futureDatedInput = document.getElementById("future-dated");
   const futureDatedValue = document.getElementById("future-dated-value");
@@ -346,11 +348,89 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
     }
   }
 
+  function credentialTypesAvailable() {
+    return srvInput.value === "6.24.2"
+      && templateSelect.value === "templates/6.24.2/default.json";
+  }
+
+  function updateCredentialTypeVisibility() {
+    const isAvailable = credentialTypesAvailable();
+    credentialTypeField.hidden = !isAvailable;
+    if (!isAvailable) {
+      for (const input of credentialTypeInputs) input.checked = false;
+    }
+  }
+
   function renderPayload(payload) {
-    const payloadText = JSON.stringify(payload, null, 2);
-    const shellPayload = payloadText.replaceAll("'", String.raw`'\''`);
     const command = curlCommandTemplate.replace("{srv}", srvInput.value);
-    payloadOutput.textContent = `${command} '${shellPayload}'`;
+    const shellEscape = (value) => value.replaceAll("'", String.raw`'\''`);
+    const appendText = (value) => payloadOutput.append(document.createTextNode(shellEscape(value)));
+    const isEditablePath = (path) =>
+      (path.length === 2 && path[0] === "header" && ["target", "cv"].includes(path[1]))
+      || path[0] === "bodyParameters";
+
+    function setPayloadValue(path, value) {
+      const property = path.at(-1);
+      const parent = path.slice(0, -1).reduce((current, key) => current[key], loadedPayload);
+      parent[property] = value;
+    }
+
+    function appendPrimitive(value, path) {
+      const literal = JSON.stringify(value);
+      if (!isEditablePath(path)) {
+        appendText(literal);
+        return;
+      }
+
+      const editor = document.createElement("span");
+      editor.className = "payload-editable";
+      editor.contentEditable = "plaintext-only";
+      editor.spellcheck = false;
+      editor.textContent = shellEscape(literal);
+      editor.setAttribute("role", "textbox");
+      editor.setAttribute("aria-label", `Edit ${path.join(".")}`);
+      editor.addEventListener("input", () => {
+        try {
+          const jsonLiteral = editor.textContent.replaceAll(String.raw`'\''`, "'");
+          setPayloadValue(path, JSON.parse(jsonLiteral));
+          editor.classList.remove("payload-editable-invalid");
+          copyButton.disabled = false;
+          status.textContent = "Payload updated with the edited value.";
+        } catch {
+          editor.classList.add("payload-editable-invalid");
+          copyButton.disabled = true;
+          status.textContent = `${path.join(".")} must be a valid JSON value.`;
+        }
+      });
+      editor.addEventListener("blur", () => {
+        if (!editor.classList.contains("payload-editable-invalid")) renderPayload(loadedPayload);
+      });
+      payloadOutput.append(editor);
+    }
+
+    function appendJson(value, path = [], depth = 0) {
+      if (value === null || typeof value !== "object") {
+        appendPrimitive(value, path);
+        return;
+      }
+
+      const isArray = Array.isArray(value);
+      const entries = isArray ? value.map((item, index) => [index, item]) : Object.entries(value);
+      appendText(isArray ? "[" : "{");
+      if (entries.length) appendText("\n");
+      entries.forEach(([key, item], index) => {
+        appendText("  ".repeat(depth + 1));
+        if (!isArray) appendText(`${JSON.stringify(key)}: `);
+        appendJson(item, [...path, key], depth + 1);
+        appendText(index < entries.length - 1 ? ",\n" : "\n");
+      });
+      if (entries.length) appendText("  ".repeat(depth));
+      appendText(isArray ? "]" : "}");
+    }
+
+    payloadOutput.replaceChildren(document.createTextNode(`${command} '`));
+    appendJson(payload);
+    payloadOutput.append(document.createTextNode("'"));
     copyButton.disabled = false;
   }
 
@@ -388,12 +468,17 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
     }
     updateFutureDatedVisibility();
     updateRemotePartyRoleVisibility();
+    updateCredentialTypeVisibility();
   }
 
   srvInput.addEventListener("srvchange", updateTemplates);
   templateSelect.addEventListener("change", () => {
+    loadedPayload = null;
+    copyButton.disabled = true;
+    payloadOutput.textContent = "Your generated payload will appear here.";
     updateFutureDatedVisibility();
     updateRemotePartyRoleVisibility();
+    updateCredentialTypeVisibility();
   });
   futureDatedInput.addEventListener("change", () => {
     const formattedValue = futureDatedInput.value
@@ -409,6 +494,9 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
     event.preventDefault();
 
     const selectedRemotePartyRoles = remotePartyRoleInputs
+      .filter((input) => input.checked)
+      .map((input) => input.value);
+    const selectedCredentialTypes = credentialTypeInputs
       .filter((input) => input.checked)
       .map((input) => input.value);
 
@@ -427,7 +515,6 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
     try {
       const response = await fetch(templateSelect.value, { cache: "no-store" });
       if (!response.ok) throw new Error(`Payload template request failed (${response.status})`);
-
       loadedPayload = await response.json();
       let appliedSelections = false;
       if (["6.11", "8.1.1"].includes(srvInput.value)) {
@@ -440,6 +527,11 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
       if (remotePartyRolesAvailable() && selectedRemotePartyRoles.length) {
         loadedPayload.bodyParameters ??= {};
         loadedPayload.bodyParameters.remotePartyRole = selectedRemotePartyRoles;
+        appliedSelections = true;
+      }
+      if (credentialTypesAvailable() && selectedCredentialTypes.length) {
+        loadedPayload.bodyParameters ??= {};
+        loadedPayload.bodyParameters.credentialType = selectedCredentialTypes;
         appliedSelections = true;
       }
       if (versionSelect.value && originatorInput.value) {
