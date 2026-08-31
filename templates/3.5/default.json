@@ -3,7 +3,6 @@
   "header": {
     "originatorName": "supplier1",
     "target": "00-DB-12-34-56-78-90-A0",
-    "originatorCounter": 1000,
     "sr": "3.5",
     "srv": "3.5",
     "cv": 1

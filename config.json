@@ -286,6 +286,13 @@
         "IS",
         "GS"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/3.2/default.json"
+        }
+      ],
       "futureDated": "yes"
     },
     {
@@ -430,6 +437,13 @@
         "ED",
         "MDR"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/4.2/default.json"
+        }
+      ],
       "futureDated": "yes"
     },
     {
@@ -442,6 +456,13 @@
       "permittedUsers": [
         "IS",
         "GS"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/4.3/default.json"
+        }
       ],
       "futureDated": "yes"
     },
@@ -1527,6 +1548,13 @@
       "permittedUsers": [
         "IS"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/7.1/default.json"
+        }
+      ],
       "futureDated": "no"
     },
     {
@@ -1541,6 +1569,13 @@
         "IS",
         "GS"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/7.2/default.json"
+        }
+      ],
       "futureDated": "no"
     },
     {
@@ -1554,6 +1589,13 @@
       "permittedUsers": [
         "IS",
         "GS"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/7.3/default.json"
+        }
       ],
       "futureDated": "no"
     },
@@ -1571,6 +1613,13 @@
         "RSA",
         "ED",
         "GT"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/7.4/default.json"
+        }
       ],
       "futureDated": "no"
     },
@@ -1649,6 +1698,13 @@
       ],
       "permittedUsers": [
         "IS"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/7.1/default.json"
+        }
       ],
       "futureDated": "no"
     },

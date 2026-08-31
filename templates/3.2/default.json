@@ -3,12 +3,11 @@
   "header": {
     "originatorName": "supplier1",
     "target": "00-DB-12-34-56-78-90-A0",
-    "sr": "3.4",
-    "srv": "3.4",
+    "sr": "3.2",
+    "srv": "3.2",
     "cv": 1
   },
   "bodyParameters": {
-    "supplierName": "E-ON",
-    "supplierTelephoneNumber": "0333 202 4650"
+    "restrictionDateTime": "2014-03-27T15:45:32.00Z"
   }
 }

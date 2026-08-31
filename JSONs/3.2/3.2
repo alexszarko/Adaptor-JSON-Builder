@@ -1,0 +1,13 @@
+curl -X 'POST' 'http://localhost:8027/v1/request-executor/srv/3.2' -H 'accept: application/json' -H 'Content-Type: application/json' -d '{
+  "duisVersion": "4.0",
+  "header": {
+    "originatorName": "supplier1",
+    "target": "00-DB-12-34-56-78-90-A0",
+    "sr": "3.2",
+    "srv": "3.2",
+    "cv": 1
+  },
+  "bodyParameters": {
+    "restrictionDateTime": "2014-03-27T15:45:32.00Z"
+  }
+}'

@@ -3,11 +3,9 @@
   "header": {
     "originatorName": "supplier1",
     "target": "00-DB-12-34-56-78-90-A0",
-    "sr": "3.3",
-    "srv": "3.3",
-    "cv": 1
+    "sr": "7.3",
+    "srv": "7.3",
+    "cv": 4
   },
-  "bodyParameters": {
-    "esmeEventLogType": "ESME"
-  }
+  "bodyParameters": {}
 }
