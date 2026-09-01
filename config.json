@@ -253,6 +253,9 @@
         "IS",
         "GS"
       ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/2.5/default.json"}
+      ],
       "futureDated": "no"
     },
     {
@@ -391,6 +394,9 @@
         "ED",
         "GT"
       ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/4.1.2/default.json"}
+      ],
       "futureDated": "yes"
     },
     {
@@ -422,6 +428,9 @@
       ],
       "permittedUsers": [
         "GS"
+      ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/4.1.4/default.json"}
       ],
       "futureDated": "yes"
     },
@@ -497,6 +506,9 @@
         "IS",
         "GS"
       ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/4.4.3/default.json"}
+      ],
       "futureDated": "yes"
     },
     {
@@ -510,6 +522,9 @@
         "IS",
         "GS"
       ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/4.4.4/default.json"}
+      ],
       "futureDated": "yes"
     },
     {
@@ -522,6 +537,9 @@
       "permittedUsers": [
         "IS",
         "GS"
+      ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/4.4.5/default.json"}
       ],
       "futureDated": "yes"
     },
@@ -666,6 +684,9 @@
         "IS",
         "OU"
       ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/4.11.2/default.json"}
+      ],
       "futureDated": "no"
     },
     {
@@ -678,6 +699,9 @@
       "permittedUsers": [
         "IS",
         "ED"
+      ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/4.12.1/default.json"}
       ],
       "futureDated": "yes"
     },
@@ -692,6 +716,9 @@
         "ES",
         "ED"
       ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/4.12.2/default.json"}
+      ],
       "futureDated": "yes"
     },
     {
@@ -704,6 +731,9 @@
       "permittedUsers": [
         "IS",
         "GS"
+      ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/4.13/default.json"}
       ],
       "futureDated": "yes"
     },
@@ -738,6 +768,9 @@
         "IS",
         "ED"
       ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/4.15/default.json"}
+      ],
       "futureDated": "yes"
     },
     {
@@ -750,6 +783,9 @@
       "permittedUsers": [
         "IS",
         "ED"
+      ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/4.16/default.json"}
       ],
       "futureDated": "no"
     },
@@ -787,6 +823,9 @@
       "permittedUsers": [
         "IS",
         "GS"
+      ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/4.18/default.json"}
       ],
       "futureDated": "yes"
     },

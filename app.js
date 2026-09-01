@@ -44,14 +44,30 @@ async function loadFilterOptions() {
     if (!Array.isArray(filterOptions.serviceRequestVariant)) {
       throw new Error("Configuration value for service-request-variant must be an array");
     }
+    const availableServiceRequestVariants = filterOptions.serviceRequestVariant.filter(
+      (option) => typeof option === "object" && option.payloadTemplates?.length > 0,
+    );
     renderMissingTemplateSrvs(filterOptions.serviceRequestVariant);
-    initialiseSrvCombobox(filterOptions.serviceRequestVariant, filterOptions.role);
+    initialiseMissingTemplatesDialog();
+    initialiseSrvCombobox(availableServiceRequestVariants, filterOptions.role);
     initialiseOriginatorLookup(environmentSetup);
-    initialisePayloadPreview(filterOptions.serviceRequestVariant, filterOptions.curlCommandTemplate);
+    initialisePayloadPreview(availableServiceRequestVariants, filterOptions.curlCommandTemplate);
   } catch (error) {
     console.error(error);
     status.textContent = "Unable to load the filter configuration.";
   }
+}
+
+function initialiseMissingTemplatesDialog() {
+  const dialog = document.getElementById("missing-templates-dialog");
+  const openButton = document.getElementById("show-missing-templates");
+  const closeButton = document.getElementById("close-missing-templates");
+
+  openButton.addEventListener("click", () => dialog.showModal());
+  closeButton.addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
 }
 
 function renderMissingTemplateSrvs(serviceRequestVariants) {
@@ -120,7 +136,6 @@ function initialiseSrvCombobox(options, roleOptions) {
   const list = document.getElementById("service-request-variant-list");
   const roleSelect = document.getElementById("role");
   const commandVariantSelect = document.getElementById("command-variant");
-  const commandVariantWarning = document.getElementById("command-variant-warning");
   const roleCodes = {
     "Import Supplier 1": "IS",
     "Import Supplier 2": "IS",
@@ -133,9 +148,13 @@ function initialiseSrvCombobox(options, roleOptions) {
     "Registered Supplier Agent": "RSA",
     "Meter Data Retriever": "MDR",
   };
-  const allSrvValues = options.map((option) =>
-    typeof option === "string" ? option : option.srv,
-  );
+  const allCommandVariants = [...new Set(
+    options.flatMap((option) =>
+      typeof option === "object" && Array.isArray(option.commandVariants)
+        ? option.commandVariants
+        : [],
+    ),
+  )].sort((left, right) => Number(left) - Number(right));
 
   function updateRoleOptions(srv) {
     const selectedRole = roleSelect.value;
@@ -167,10 +186,14 @@ function initialiseSrvCombobox(options, roleOptions) {
 
   function availableSrvOptions() {
     const roleCode = roleCodes[roleSelect.value];
-    if (!roleCode) return options;
-    return options.filter((option) =>
-      typeof option === "object" && option.permittedUsers?.includes(roleCode),
-    );
+    const commandVariant = commandVariantSelect.value;
+    return options.filter((option) => {
+      if (typeof option !== "object") return false;
+      const roleIsPermitted = !roleCode || option.permittedUsers?.includes(roleCode);
+      const commandVariantIsPermitted = !commandVariant
+        || option.commandVariants?.includes(commandVariant);
+      return roleIsPermitted && commandVariantIsPermitted;
+    });
   }
 
   function availableSrvValues() {
@@ -190,7 +213,7 @@ function initialiseSrvCombobox(options, roleOptions) {
     const srvConfig = options.find((option) =>
       typeof option === "object" && option.srv === srv,
     );
-    const commandVariants = srvConfig?.commandVariants ?? [];
+    const commandVariants = srvConfig?.commandVariants ?? allCommandVariants;
     for (const value of commandVariants) {
       const option = document.createElement("option");
       option.value = value;
@@ -202,14 +225,7 @@ function initialiseSrvCombobox(options, roleOptions) {
     }
   }
 
-  function warnIfSrvIsMissing() {
-    if (!availableSrvValues().includes(input.value)) {
-      commandVariantWarning.hidden = false;
-    }
-  }
-
-  commandVariantSelect.addEventListener("pointerdown", warnIfSrvIsMissing);
-  commandVariantSelect.addEventListener("focus", warnIfSrvIsMissing);
+  updateCommandVariants("");
 
   function closeList() {
     list.hidden = true;
@@ -236,7 +252,6 @@ function initialiseSrvCombobox(options, roleOptions) {
         option.addEventListener("click", () => {
           input.value = value;
           input.setCustomValidity("");
-          commandVariantWarning.hidden = true;
           updateRoleOptions(value);
           updateCommandVariants(value);
           input.dispatchEvent(new Event("srvchange"));
@@ -254,8 +269,7 @@ function initialiseSrvCombobox(options, roleOptions) {
   input.addEventListener("click", () => showMatches(true));
   input.addEventListener("input", () => {
     input.setCustomValidity("");
-    commandVariantWarning.hidden = true;
-    const validSrv = allSrvValues.includes(input.value) ? input.value : "";
+    const validSrv = availableSrvValues().includes(input.value) ? input.value : "";
     updateRoleOptions(validSrv);
     updateCommandVariants(validSrv);
     input.dispatchEvent(new Event("srvchange"));
@@ -272,9 +286,17 @@ function initialiseSrvCombobox(options, roleOptions) {
       input.value = "";
       input.setCustomValidity("");
     }
-    commandVariantWarning.hidden = true;
     updateCommandVariants(input.value);
     input.dispatchEvent(new Event("srvchange"));
+    closeList();
+  });
+  commandVariantSelect.addEventListener("change", () => {
+    if (input.value && !availableSrvValues().includes(input.value)) {
+      input.value = "";
+      input.setCustomValidity("");
+      updateRoleOptions("");
+      input.dispatchEvent(new Event("srvchange"));
+    }
     closeList();
   });
 

@@ -1,0 +1,1 @@
+curl -X 'POST' 'http://localhost:8027/v1/request-executor/srv/4.15' -H 'accept: application/json' -H 'Content-Type: application/json' -d '{"duisVersion":"5.1","header":{"originatorName":"supplier-IS1-DUIS5.1","target":"98-B1-77-FF-FF-50-DE-E1","sr":"4.15","srv":"4.15","cv":1},"bodyParameters":{}}'

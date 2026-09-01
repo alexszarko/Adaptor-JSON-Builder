@@ -4,48 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Build an adaptor configuration by selecting an environment, role, and DUIS version.">
-  <title>Adaptor JSON Builder</title>
-  <link rel="stylesheet" href="styles.css?v=20">
+  <title>Configuration Tool</title>
+  <link rel="stylesheet" href="styles.css?v=22">
 </head>
 <body>
   <main class="page-shell">
-    <aside class="missing-templates" aria-labelledby="missing-templates-title">
-      <h2 id="missing-templates-title">SRVs no available templates</h2>
-      <ul id="missing-template-srvs" aria-live="polite"></ul>
-    </aside>
-    <section class="builder-card" aria-labelledby="page-title">
-      <div class="eyebrow">Configuration tool</div>
-      <div class="title-row">
-        <h1 id="page-title">Adaptor JSON Builder</h1>
+    <section class="builder-card" aria-label="Configuration tool">
+      <div class="builder-heading">
+        <div class="eyebrow">Configuration tool</div>
         <button id="reset-page" class="reset-button" type="button">Reset</button>
       </div>
-      <p class="intro">Choose your configuration options below to get started.</p>
+      <button id="show-missing-templates" class="missing-templates-link" type="button">View SRVs with no available templates</button>
       <form id="filter-form" class="filter-form">
-        <label class="field" for="environment"><span>Select Environment</span><span class="select-wrap"><select id="environment" name="environment"><option value="" selected>Choose an environment</option></select></span></label>
-        <label class="field" for="role"><span>Select Role</span><span class="select-wrap"><select id="role" name="role"><option value="" selected>Choose a role</option></select></span></label>
-        <label class="field" for="duis-version"><span>Select DUIS Version</span><span class="select-wrap"><select id="duis-version" name="duisVersion"><option value="" selected>Choose a DUIS version</option></select></span></label>
-        <label class="field" for="determined-originator-name">
-          <span>Determined Originator Name</span>
-          <input id="determined-originator-name" name="determinedOriginatorName" type="text" placeholder="Resolved from your selections" aria-describedby="header-selection-warning" readonly>
-          <span id="header-selection-warning" class="field-warning" role="alert" hidden></span>
-        </label>
-        <div class="field">
-          <label for="service-request-variant-input">Select Service Request Variant</label>
-          <div id="srv-combobox" class="combo">
-            <span class="select-wrap">
-              <input id="service-request-variant-input" name="serviceRequestVariant" placeholder="Type or choose an SRV" autocomplete="off" role="combobox" aria-autocomplete="list" aria-controls="service-request-variant-list" aria-expanded="false" required>
-            </span>
-            <div id="service-request-variant-list" class="combo-list" role="listbox" hidden></div>
+        <section class="form-section" aria-labelledby="header-details-title">
+          <h2 id="header-details-title">Header Details</h2>
+          <div class="form-section-fields">
+            <label class="field" for="environment"><span>Select Environment</span><span class="select-wrap"><select id="environment" name="environment"><option value="" selected>Choose an environment</option></select></span></label>
+            <label class="field" for="role"><span>Select Role</span><span class="select-wrap"><select id="role" name="role"><option value="" selected>Choose a role</option></select></span></label>
+            <label class="field" for="duis-version"><span>Select DUIS Version</span><span class="select-wrap"><select id="duis-version" name="duisVersion"><option value="" selected>Choose a DUIS version</option></select></span></label>
+            <label class="field" for="determined-originator-name">
+              <span>Determined Originator Name</span>
+              <input id="determined-originator-name" name="determinedOriginatorName" type="text" placeholder="Resolved from your selections" aria-describedby="header-selection-warning" readonly>
+              <span id="header-selection-warning" class="field-warning" role="alert" hidden></span>
+            </label>
+            <label class="field" for="command-variant">
+              <span>Select Command Variant</span>
+              <span class="select-wrap">
+                <select id="command-variant" name="commandVariant">
+                  <option value="" selected>Choose a command variant</option>
+                </select>
+              </span>
+            </label>
+            <label class="field" for="target">
+              <span>Target</span>
+              <input id="target" name="target" type="text" placeholder="1C-23-4F-00-00-44-0E-CB" pattern="[0-9A-Fa-f]{2}(-[0-9A-Fa-f]{2}){7}" maxlength="23" title="Enter eight hexadecimal pairs separated by hyphens, for example 1C-23-4F-00-00-44-0E-CB" autocomplete="off">
+            </label>
           </div>
-        </div>
-        <label class="field" for="payload-template">
+        </section>
+
+        <section class="form-section" aria-labelledby="srv-details-title">
+          <h2 id="srv-details-title">SRV Details</h2>
+          <div class="form-section-fields">
+            <div class="field">
+              <label for="service-request-variant-input">Select Service Request Variant</label>
+              <div id="srv-combobox" class="combo">
+                <span class="select-wrap">
+                  <input id="service-request-variant-input" name="serviceRequestVariant" placeholder="Type or choose an SRV" autocomplete="off" role="combobox" aria-autocomplete="list" aria-controls="service-request-variant-list" aria-expanded="false" required>
+                </span>
+                <div id="service-request-variant-list" class="combo-list" role="listbox" hidden></div>
+              </div>
+            </div>
+            <label class="field" for="payload-template">
           <span>Select Payload Template</span>
           <span class="select-wrap">
             <select id="payload-template" name="payloadTemplate" required>
               <option value="" selected>Choose a payload template</option>
             </select>
           </span>
-        </label>
+            </label>
         <fieldset id="remote-party-role-field" class="field checkbox-field" hidden>
           <legend>Remote Party Role Tags</legend>
           <div class="checkbox-options">
@@ -78,19 +94,8 @@
           <input id="future-dated-value" name="futureDated" type="hidden">
           <output id="future-dated-formatted" class="formatted-date" hidden></output>
         </label>
-        <label class="field" for="command-variant">
-          <span>Select Command Variant</span>
-          <span class="select-wrap">
-            <select id="command-variant" name="commandVariant" aria-describedby="command-variant-warning">
-              <option value="" selected>Choose a command variant</option>
-            </select>
-          </span>
-          <span id="command-variant-warning" class="field-warning" role="alert" hidden>Please choose an SRV before choosing a Command Variant.</span>
-        </label>
-        <label class="field" for="target">
-          <span>Target</span>
-          <input id="target" name="target" type="text" placeholder="1C-23-4F-00-00-44-0E-CB" pattern="[0-9A-Fa-f]{2}(-[0-9A-Fa-f]{2}){7}" maxlength="23" title="Enter eight hexadecimal pairs separated by hyphens, for example 1C-23-4F-00-00-44-0E-CB" autocomplete="off">
-        </label>
+          </div>
+        </section>
         <button type="submit">Continue</button>
       </form>
       <p id="status" class="status" role="status" aria-live="polite"></p>
@@ -109,6 +114,14 @@
       </section>
     </aside>
   </main>
-  <script src="app.js?v=28"></script>
+  <dialog id="missing-templates-dialog" class="missing-templates-dialog" aria-labelledby="missing-templates-title">
+    <div class="dialog-heading">
+      <h2 id="missing-templates-title">SRVs with no available templates</h2>
+      <button id="close-missing-templates" class="dialog-close" type="button" aria-label="Close">&times;</button>
+    </div>
+    <p>These SRVs are hidden from the Service Request Variant selector.</p>
+    <ul id="missing-template-srvs" aria-live="polite"></ul>
+  </dialog>
+  <script src="app.js?v=30"></script>
 </body>
 </html>
