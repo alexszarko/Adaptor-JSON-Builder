@@ -2,7 +2,7 @@
   "curlCommandTemplate": "curl -X 'POST' 'http://localhost:8027/v1/request-executor/srv/{srv}' -H 'accept: application/json' -H 'Content-Type: application/json' -d",
   "environment": [
     "SIT-A",
-    "SITB",
+    "SIT-B",
     "UIT-A",
     "UIT-B"
   ],
