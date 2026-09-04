@@ -13,7 +13,7 @@ document.getElementById("reset-page").addEventListener("click", () => window.loc
 async function loadFilterOptions() {
   try {
     const [configResponse, setupResponse] = await Promise.all([
-      fetch("config.json", { cache: "no-store" }),
+      fetch("app-config.json", { cache: "no-store" }),
       fetch("environment-setup.json", { cache: "no-store" }),
     ]);
     if (!configResponse.ok) throw new Error(`Configuration request failed (${configResponse.status})`);
@@ -45,7 +45,8 @@ async function loadFilterOptions() {
       throw new Error("Configuration value for service-request-variant must be an array");
     }
     const availableServiceRequestVariants = filterOptions.serviceRequestVariant.filter(
-      (option) => typeof option === "object" && option.payloadTemplates?.length > 0,
+      (option) => typeof option === "object"
+        && (option.payloadTemplates?.length > 0 || option.notPermitted),
     );
     renderMissingTemplateSrvs(filterOptions.serviceRequestVariant);
     initialiseMissingTemplatesDialog();
@@ -54,7 +55,7 @@ async function loadFilterOptions() {
     initialisePayloadPreview(availableServiceRequestVariants, filterOptions.curlCommandTemplate);
   } catch (error) {
     console.error(error);
-    status.textContent = "Unable to load the filter configuration.";
+    status.textContent = `Unable to load the filter configuration: ${error.message}`;
   }
 }
 
@@ -72,23 +73,23 @@ function initialiseMissingTemplatesDialog() {
 
 function renderMissingTemplateSrvs(serviceRequestVariants) {
   const list = document.getElementById("missing-template-srvs");
-  const missingSrvs = [...new Set(
-    serviceRequestVariants
-      .filter((option) => typeof option === "object" && !(option.payloadTemplates?.length > 0))
-      .map((option) => option.srv),
-  )];
+  const unavailableSrvs = serviceRequestVariants.filter(
+    (option) => typeof option === "object"
+      && !option.notPermitted
+      && !(option.payloadTemplates?.length > 0),
+  );
 
   list.replaceChildren();
-  for (const srv of missingSrvs) {
+  for (const option of unavailableSrvs) {
     const item = document.createElement("li");
-    item.textContent = srv;
+    item.textContent = option.srv;
     list.append(item);
   }
 
-  if (!missingSrvs.length) {
+  if (!unavailableSrvs.length) {
     const item = document.createElement("li");
     item.className = "missing-templates-empty";
-    item.textContent = "All configured SRVs have templates.";
+    item.textContent = "All configured SRVs are available.";
     list.append(item);
   }
 }
@@ -162,9 +163,11 @@ function initialiseSrvCombobox(options, roleOptions) {
       typeof option === "object" && option.srv === srv,
     );
     const permittedUsers = srvConfig?.permittedUsers;
-    const availableRoles = Array.isArray(permittedUsers)
-      ? roleOptions.filter((role) => permittedUsers.includes(roleCodes[role]))
-      : roleOptions;
+    const availableRoles = srvConfig?.notPermitted
+      ? roleOptions
+      : Array.isArray(permittedUsers)
+        ? roleOptions.filter((role) => permittedUsers.includes(roleCodes[role]))
+        : roleOptions;
 
     const placeholder = document.createElement("option");
     placeholder.value = "";
@@ -189,6 +192,7 @@ function initialiseSrvCombobox(options, roleOptions) {
     const commandVariant = commandVariantSelect.value;
     return options.filter((option) => {
       if (typeof option !== "object") return false;
+      if (option.notPermitted) return true;
       const roleIsPermitted = !roleCode || option.permittedUsers?.includes(roleCode);
       const commandVariantIsPermitted = !commandVariant
         || option.commandVariants?.includes(commandVariant);
@@ -483,10 +487,13 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
 
     const srvConfig = selectedSrvConfig();
     const templates = srvConfig?.payloadTemplates ?? [];
-    placeholder.textContent = templates.length
-      ? "Choose a payload template"
-      : "No payload templates available";
+    placeholder.textContent = srvConfig?.notPermitted
+      ? "This SRV is not permitted to be sent"
+      : templates.length
+        ? "Choose a payload template"
+        : "No payload templates available";
     templateSelect.replaceChildren(placeholder);
+    templateSelect.disabled = Boolean(srvConfig?.notPermitted);
 
     for (const template of templates) {
       const option = document.createElement("option");
@@ -533,6 +540,11 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
   form.addEventListener("submit", async (event) => {
     if (event.defaultPrevented) return;
     event.preventDefault();
+
+    if (selectedSrvConfig()?.notPermitted) {
+      status.textContent = "This SRV is not permitted to be sent";
+      return;
+    }
 
     const selectedRemotePartyRoles = remotePartyRoleInputs
       .filter((input) => input.checked)

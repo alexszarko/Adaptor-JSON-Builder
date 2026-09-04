@@ -1,0 +1,16 @@
+curl -X 'POST' 'http://localhost:8027/v1/request-executor/srv/6.32' -H 'accept: application/json' -H 'Content-Type: application/json' -d '{
+  "duisVersion": "4.0",
+  "header": {
+    "originatorName": "supplier1",
+    "target": "00-DB-12-34-56-78-90-A2",
+    "sr": "6.32",
+    "srv": "6.32",
+    "cv": 1
+  },
+  "bodyParameters": {
+    "readLogPeriod": {
+      "startDateTime": "2014-12-20T00:00:00.00Z",
+      "endDateTime": "2014-12-31T09:00:00.00Z"
+    }
+  }
+}'

@@ -1506,6 +1506,13 @@
       "permittedUsers": [
         "ED"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.27/default.json"
+        }
+      ],
       "futureDated": "yes"
     },
     {
@@ -1532,10 +1539,17 @@
         "IS",
         "GS"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.29/default.json"
+        }
+      ],
       "futureDated": "no"
     },
     {
-      "srv": "6.3",
+      "srv": "6.30",
       "commandVariants": [
         "1",
         "2",
@@ -1545,6 +1559,13 @@
         "IS",
         "GS",
         "RSA"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.30/default.json"
+        }
       ],
       "futureDated": "no"
     },
@@ -1560,6 +1581,13 @@
         "GS",
         "RSA"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.31/default.json"
+        }
+      ],
       "futureDated": "no"
     },
     {
@@ -1573,6 +1601,13 @@
         "IS",
         "GS",
         "RSA"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/6.32/default.json"
+        }
       ],
       "futureDated": "no"
     },
@@ -1758,6 +1793,13 @@
         "IS",
         "OU"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/7.11/default.json"
+        }
+      ],
       "futureDated": "yes"
     },
     {
@@ -1770,6 +1812,13 @@
       ],
       "permittedUsers": [
         "IS"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/7.12/default.json"
+        }
       ],
       "futureDated": "no"
     },
@@ -1798,6 +1847,13 @@
         "ED",
         "OU"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/7.14/default.json"
+        }
+      ],
       "futureDated": "yes"
     },
     {
@@ -1811,6 +1867,13 @@
         "IS",
         "ED",
         "OU"
+      ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/7.15/default.json"
+        }
       ],
       "futureDated": "yes"
     },
@@ -1884,6 +1947,13 @@
         "IS",
         "GS"
       ],
+      "payloadTemplates": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "templates/8.3/default.json"
+        }
+      ],
       "futureDated": "no"
     },
     {
@@ -1908,6 +1978,7 @@
       "permittedUsers": [
         "DSP"
       ],
+      "notPermitted": true,
       "futureDated": "yes"
     },
     {
@@ -1916,6 +1987,7 @@
       "permittedUsers": [
         "DSP"
       ],
+      "notPermitted": true,
       "futureDated": "no"
     },
     {

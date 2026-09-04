@@ -1,0 +1,13 @@
+{
+  "duisVersion": "4.0",
+  "header": {
+    "originatorName": "supplier1",
+    "target": "90-B3-D5-1F-30-00-00-02",
+    "sr": "8.3",
+    "srv": "8.3",
+    "cv": 8
+  },
+  "bodyParameters": {
+    "deviceId": "00-DB-12-34-56-78-90-A0"
+  }
+}

@@ -9,7 +9,7 @@ from build_environment_json import read_sheet_rows
 
 
 SOURCE = Path("SRV Control Sheet.xlsx")
-CONFIG = Path("config.json")
+CONFIG = Path("app-config.json")
 SHEET_NAME = "SRV's"
 CV_COLUMNS = {
     7: ("1",),
@@ -34,7 +34,9 @@ PERMITTED_USER_COLUMNS = {
 
 
 def normalise_srv(value: str) -> str:
-    """Remove Excel floating-point noise without changing identifiers such as 4.10."""
+    """Restore known trailing-zero SRVs and remove Excel floating-point noise."""
+    if value == "6.3":
+        return "6.30"
     if re.fullmatch(r"\d+\.\d{6,}", value):
         return format(float(value), ".12g")
     return value

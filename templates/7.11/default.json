@@ -1,0 +1,16 @@
+{
+  "duisVersion": "4.0",
+  "header": {
+    "originatorName": "supplier1",
+    "target": "00-DB-12-34-56-78-90-A0",
+    "sr": "7.11",
+    "srv": "7.11",
+    "cv": 1
+  },
+  "bodyParameters": {
+    "readLogPeriod": {
+      "startDateTime": "2014-12-25T23:00:00.00Z",
+      "endDateTime": "2015-01-01T00:00:00.00Z"
+    }
+  }
+}
