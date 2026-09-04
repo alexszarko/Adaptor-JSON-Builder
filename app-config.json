@@ -1,5 +1,11 @@
 {
-  "curlCommandTemplate": "curl -X 'POST' 'http://localhost:8027/v1/request-executor/srv/{srv}' -H 'accept: application/json' -H 'Content-Type: application/json' -d",
+  "curlCommandTemplate": "curl -X 'POST' 'http://localhost:{port}/v1/request-executor/srv/{srv}' -H 'accept: application/json' -H 'Content-Type: application/json' -d",
+  "environmentPorts": {
+    "SIT-A": 9027,
+    "SIT-B": 9028,
+    "UIT-A": 8028,
+    "UIT-B": 8027
+  },
   "environment": [
     "SIT-A",
     "SIT-B",
