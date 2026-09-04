@@ -52,7 +52,7 @@ async function loadFilterOptions() {
     initialiseMissingTemplatesDialog();
     initialiseSrvCombobox(availableServiceRequestVariants, filterOptions.role);
     initialiseOriginatorLookup(environmentSetup);
-    initialisePayloadPreview(availableServiceRequestVariants, filterOptions.curlCommandTemplate);
+    initialisePayloadPreview(availableServiceRequestVariants, filterOptions.curlCommandTemplate, environmentSetup);
   } catch (error) {
     console.error(error);
     status.textContent = `Unable to load the filter configuration: ${error.message}`;
@@ -314,7 +314,7 @@ function initialiseSrvCombobox(options, roleOptions) {
   });
 }
 
-function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
+function initialisePayloadPreview(srvOptions, curlCommandTemplate, environmentSetup) {
   const form = document.getElementById("filter-form");
   const srvInput = document.getElementById("service-request-variant-input");
   const templateSelect = document.getElementById("payload-template");
@@ -339,6 +339,15 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
   const targetInput = document.getElementById("target");
   let currentSrv = "";
   let loadedPayload = null;
+
+  const envPortMap = {
+    // normalized keys (remove non-alphanum, uppercase)
+    SITA: 9027,
+    SITB: 9028,
+    UITA: 8028,
+    UITB: 8027,
+  };
+  const normalizeEnv = (value) => String(value ?? "").replace(/[^0-9A-Za-z]/g, "").toUpperCase();
 
   const today = new Date();
   const year = today.getFullYear();
@@ -405,7 +414,19 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
   }
 
   function renderPayload(payload) {
-    const command = curlCommandTemplate.replace("{srv}", srvInput.value);
+    let command = curlCommandTemplate.replace("{srv}", srvInput.value);
+    const selectedEnvironment = environmentSelect.value;
+    const envKey = normalizeEnv(selectedEnvironment);
+    const port = envPortMap[envKey];
+    if (port) {
+      if (command.includes("{port}")) {
+        command = command.replace(/\{port\}/g, port);
+      } else if (/localhost:\d+/.test(command)) {
+        command = command.replace(/localhost:\d+/, `localhost:${port}`);
+      } else if (command.includes("localhost")) {
+        command = command.replace(/localhost(?!:)/, `localhost:${port}`);
+      }
+    }
     const shellEscape = (value) => value.replaceAll("'", String.raw`'\''`);
     const appendText = (value) => payloadOutput.append(document.createTextNode(shellEscape(value)));
     const isEditablePath = (path) =>
@@ -541,6 +562,12 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
     if (event.defaultPrevented) return;
     event.preventDefault();
 
+    if (!environmentSelect.value) {
+      status.textContent = "Please select an environment before continuing.";
+      environmentSelect.focus();
+      return;
+    }
+
     if (selectedSrvConfig()?.notPermitted) {
       status.textContent = "This SRV is not permitted to be sent";
       return;
@@ -561,8 +588,8 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate) {
       versionSelect.value,
     ].filter(Boolean).length;
     if (headerSelectionCount > 0 && headerSelectionCount < 3) {
-      headerSelectionWarning.textContent = "Select Environment, Role, and DUIS Version together to update the payload header. The stored template values will be retained.";
-      headerSelectionWarning.hidden = false;
+      headerSelectionWarning.textContent = "Select Role, and DUIS Version together to update the payload header. The stored template values will be retained.";
+      headerSelectionWarning.hidden = false
     } else {
       headerSelectionWarning.hidden = true;
     }
