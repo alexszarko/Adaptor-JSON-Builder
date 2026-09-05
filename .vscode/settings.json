@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^python3 -c 'from build_environment_json import read_sheet_rows; from zipfile import ZipFile; rows=read_sheet_rows\\(ZipFile\\(\"DCC User Setup\\.xlsx\"\\), \"Service User Certs\"\\); print\\(\"rows\",len\\(rows\\)\\); print\\(\"headers\",rows\\[0\\]\\); print\\(\"sample\",rows\\[1\\]\\[:min\\(12,len\\(rows\\[1\\]\\)\\)\\]\\)'$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

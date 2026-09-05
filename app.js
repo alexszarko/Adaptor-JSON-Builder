@@ -52,7 +52,11 @@ async function loadFilterOptions() {
     initialiseMissingTemplatesDialog();
     initialiseSrvCombobox(availableServiceRequestVariants, filterOptions.role);
     initialiseOriginatorLookup(environmentSetup);
-    initialisePayloadPreview(availableServiceRequestVariants, filterOptions.curlCommandTemplate, environmentSetup);
+    initialisePayloadPreview(
+      availableServiceRequestVariants,
+      filterOptions.curlCommandTemplate,
+      filterOptions.environmentPorts,
+    );
   } catch (error) {
     console.error(error);
     status.textContent = `Unable to load the filter configuration: ${error.message}`;
@@ -314,7 +318,7 @@ function initialiseSrvCombobox(options, roleOptions) {
   });
 }
 
-function initialisePayloadPreview(srvOptions, curlCommandTemplate, environmentSetup) {
+function initialisePayloadPreview(srvOptions, curlCommandTemplate, environmentPorts) {
   const form = document.getElementById("filter-form");
   const srvInput = document.getElementById("service-request-variant-input");
   const templateSelect = document.getElementById("payload-template");
@@ -340,13 +344,6 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate, environmentSe
   let currentSrv = "";
   let loadedPayload = null;
 
-  const envPortMap = {
-    // normalized keys (remove non-alphanum, uppercase)
-    SITA: 9027,
-    SITB: 9028,
-    UITA: 8028,
-    UITB: 8027,
-  };
   const normalizeEnv = (value) => String(value ?? "").replace(/[^0-9A-Za-z]/g, "").toUpperCase();
 
   const today = new Date();
@@ -417,7 +414,9 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate, environmentSe
     let command = curlCommandTemplate.replace("{srv}", srvInput.value);
     const selectedEnvironment = environmentSelect.value;
     const envKey = normalizeEnv(selectedEnvironment);
-    const port = envPortMap[envKey];
+    const port = Object.entries(environmentPorts ?? {}).find(
+      ([environment]) => normalizeEnv(environment) === envKey,
+    )?.[1];
     if (port) {
       if (command.includes("{port}")) {
         command = command.replace(/\{port\}/g, port);
