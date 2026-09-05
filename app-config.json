@@ -194,7 +194,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/1.7/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -260,7 +260,7 @@
         "GS"
       ],
       "payloadTemplates": [
-        {"id": "default", "label": "Default", "path": "templates/2.5/default.json"}
+        {"id": "default", "label": "Default", "path": "templates/shared/empty-body.json"}
       ],
       "futureDated": "no"
     },
@@ -359,7 +359,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/3.5/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -382,7 +382,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/4.1.1/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "yes"
@@ -401,7 +401,7 @@
         "GT"
       ],
       "payloadTemplates": [
-        {"id": "default", "label": "Default", "path": "templates/4.1.2/default.json"}
+        {"id": "default", "label": "Default", "path": "templates/shared/empty-body.json"}
       ],
       "futureDated": "yes"
     },
@@ -420,7 +420,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/4.1.3/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "yes"
@@ -436,7 +436,7 @@
         "GS"
       ],
       "payloadTemplates": [
-        {"id": "default", "label": "Default", "path": "templates/4.1.4/default.json"}
+        {"id": "default", "label": "Default", "path": "templates/shared/empty-body.json"}
       ],
       "futureDated": "yes"
     },
@@ -456,7 +456,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/4.2/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "yes"
@@ -476,13 +476,14 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/4.3/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "yes"
     },
     {
       "srv": "4.4.2",
+      "optionalKaPublicSecurityCredentials": true,
       "commandVariants": [
         "1",
         "2",
@@ -496,13 +497,14 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/4.4.2/default.json"
+          "path": "templates/shared/readLogPeriod.json"
         }
       ],
       "futureDated": "yes"
     },
     {
       "srv": "4.4.3",
+      "optionalKaPublicSecurityCredentials": true,
       "commandVariants": [
         "1",
         "2",
@@ -513,7 +515,7 @@
         "GS"
       ],
       "payloadTemplates": [
-        {"id": "default", "label": "Default", "path": "templates/4.4.3/default.json"}
+        {"id": "default", "label": "Default", "path": "templates/shared/readLogPeriod.json"}
       ],
       "futureDated": "yes"
     },
@@ -529,7 +531,7 @@
         "GS"
       ],
       "payloadTemplates": [
-        {"id": "default", "label": "Default", "path": "templates/4.4.4/default.json"}
+        {"id": "default", "label": "Default", "path": "templates/shared/readLogPeriod.json"}
       ],
       "futureDated": "yes"
     },
@@ -545,7 +547,7 @@
         "GS"
       ],
       "payloadTemplates": [
-        {"id": "default", "label": "Default", "path": "templates/4.4.5/default.json"}
+        {"id": "default", "label": "Default", "path": "templates/shared/readLogPeriod.json"}
       ],
       "futureDated": "yes"
     },
@@ -565,9 +567,10 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/4.6.1/default.json"
+          "path": "templates/shared/readLogPeriod.json"
         }
       ],
+      "kaPublicSecurityCredentials": true,
       "futureDated": "yes"
     },
     {
@@ -585,7 +588,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/4.6.2/default.json"
+          "path": "templates/shared/readLogPeriod.json"
         }
       ],
       "futureDated": "yes"
@@ -609,9 +612,10 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/4.8.1/default.json"
+          "path": "templates/shared/readLogPeriod.json"
         }
       ],
+      "kaPublicSecurityCredentials": true,
       "futureDated": "yes"
     },
     {
@@ -625,6 +629,9 @@
         "IS",
         "ED",
         "OU"
+      ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/shared/readLogPeriod.json"}
       ],
       "futureDated": "yes"
     },
@@ -641,10 +648,14 @@
         "OU",
         "MDR"
       ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/shared/readLogPeriod.json"}
+      ],
       "futureDated": "yes"
     },
     {
       "srv": "4.10",
+      "optionalKaPublicSecurityCredentials": true,
       "commandVariants": [
         "1",
         "2",
@@ -655,6 +666,9 @@
         "GS",
         "ED",
         "GT"
+      ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/shared/readLogPeriod.json"}
       ],
       "futureDated": "yes"
     },
@@ -674,7 +688,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/4.11.1/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -691,7 +705,7 @@
         "OU"
       ],
       "payloadTemplates": [
-        {"id": "default", "label": "Default", "path": "templates/4.11.2/default.json"}
+        {"id": "default", "label": "Default", "path": "templates/shared/empty-body.json"}
       ],
       "futureDated": "no"
     },
@@ -707,7 +721,7 @@
         "ED"
       ],
       "payloadTemplates": [
-        {"id": "default", "label": "Default", "path": "templates/4.12.1/default.json"}
+        {"id": "default", "label": "Default", "path": "templates/shared/empty-body.json"}
       ],
       "futureDated": "yes"
     },
@@ -723,7 +737,7 @@
         "ED"
       ],
       "payloadTemplates": [
-        {"id": "default", "label": "Default", "path": "templates/4.12.2/default.json"}
+        {"id": "default", "label": "Default", "path": "templates/shared/empty-body.json"}
       ],
       "futureDated": "yes"
     },
@@ -739,12 +753,13 @@
         "GS"
       ],
       "payloadTemplates": [
-        {"id": "default", "label": "Default", "path": "templates/4.13/default.json"}
+        {"id": "default", "label": "Default", "path": "templates/shared/empty-body.json"}
       ],
       "futureDated": "yes"
     },
     {
       "srv": "4.14",
+      "optionalKaPublicSecurityCredentials": true,
       "commandVariants": [
         "1",
         "2",
@@ -758,7 +773,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/4.14/default.json"
+          "path": "templates/shared/readLogPeriod.json"
         }
       ],
       "futureDated": "yes"
@@ -775,7 +790,7 @@
         "ED"
       ],
       "payloadTemplates": [
-        {"id": "default", "label": "Default", "path": "templates/4.15/default.json"}
+        {"id": "default", "label": "Default", "path": "templates/shared/empty-body.json"}
       ],
       "futureDated": "yes"
     },
@@ -791,7 +806,7 @@
         "ED"
       ],
       "payloadTemplates": [
-        {"id": "default", "label": "Default", "path": "templates/4.16/default.json"}
+        {"id": "default", "label": "Default", "path": "templates/shared/empty-body.json"}
       ],
       "futureDated": "no"
     },
@@ -814,9 +829,10 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/4.17/default.json"
+          "path": "templates/shared/readLogPeriod.json"
         }
       ],
+      "kaPublicSecurityCredentials": true,
       "futureDated": "yes"
     },
     {
@@ -831,7 +847,7 @@
         "GS"
       ],
       "payloadTemplates": [
-        {"id": "default", "label": "Default", "path": "templates/4.18/default.json"}
+        {"id": "default", "label": "Default", "path": "templates/shared/empty-body.json"}
       ],
       "futureDated": "yes"
     },
@@ -922,7 +938,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/6.2.1/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -943,7 +959,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/6.2.2/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -964,7 +980,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/6.2.3/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -989,7 +1005,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/6.2.4/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -1009,7 +1025,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/6.2.5/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -1034,7 +1050,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/6.2.7/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -1055,7 +1071,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/6.2.8/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -1076,7 +1092,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/6.2.9/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -1092,6 +1108,9 @@
         "IS",
         "GS",
         "ED"
+      ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/shared/empty-body.json"}
       ],
       "futureDated": "no"
     },
@@ -1117,6 +1136,9 @@
       ],
       "permittedUsers": [
         "IS"
+      ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/shared/empty-body.json"}
       ],
       "futureDated": "yes"
     },
@@ -1516,7 +1538,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/6.27/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "yes"
@@ -1549,7 +1571,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/6.29/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -1570,7 +1592,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/6.30/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -1591,7 +1613,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/6.31/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -1632,7 +1654,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/7.1/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -1653,7 +1675,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/7.2/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -1674,7 +1696,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/7.3/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -1698,7 +1720,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/7.4/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -1740,6 +1762,9 @@
         "IS",
         "ED",
         "OU"
+      ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/shared/empty-body.json"}
       ],
       "futureDated": "yes"
     },
@@ -1783,7 +1808,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/7.1/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "no"
@@ -1803,7 +1828,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/7.11/default.json"
+          "path": "templates/shared/readLogPeriod.json"
         }
       ],
       "futureDated": "yes"
@@ -1857,7 +1882,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/7.14/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "yes"
@@ -1878,7 +1903,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/7.15/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "yes"
@@ -2210,6 +2235,9 @@
       "permittedUsers": [
         "OU"
       ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/shared/empty-body.json"}
+      ],
       "futureDated": "no"
     },
     {
@@ -2243,7 +2271,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "templates/11.2/default.json"
+          "path": "templates/shared/empty-body.json"
         }
       ],
       "futureDated": "yes"
@@ -2314,6 +2342,9 @@
       ],
       "permittedUsers": [
         "GT"
+      ],
+      "payloadTemplates": [
+        {"id": "default", "label": "Default", "path": "templates/shared/empty-body.json"}
       ],
       "futureDated": "no"
     }

@@ -94,6 +94,11 @@
           <input id="future-dated-value" name="futureDated" type="hidden">
           <output id="future-dated-formatted" class="formatted-date" hidden></output>
         </label>
+        <fieldset id="old-user-ka-field" class="field checkbox-field" hidden>
+          <div class="checkbox-options">
+            <label><input id="old-user-ka" type="checkbox" name="oldUserRequiresKaCert"> Old User requires KA Cert</label>
+          </div>
+        </fieldset>
           </div>
         </section>
         <button type="submit">Continue</button>
@@ -122,6 +127,6 @@
     <p>These SRVs are hidden because they have no payload template.</p>
     <ul id="missing-template-srvs" aria-live="polite"></ul>
   </dialog>
-  <script src="app.js?v=34"></script>
+  <script src="app.js?v=39"></script>
 </body>
 </html>

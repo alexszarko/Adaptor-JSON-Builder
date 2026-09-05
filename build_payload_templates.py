@@ -4,55 +4,25 @@ import json
 from pathlib import Path
 
 
+EMPTY_BODY_TEMPLATE = Path("templates/shared/empty-body.json")
+READ_LOG_PERIOD_TEMPLATE = Path("templates/shared/readLogPeriod.json")
+
+
 TEMPLATES = {
     Path("JSONs/1.1.1/ESME/Block/1.1.1 - ESME - Block"): Path("templates/1.1.1/esme-block.json"),
     Path("JSONs/1.1.1/ESME/TOU/1.1.1 - ESME - TOU"): Path("templates/1.1.1/esme-tou.json"),
     Path("JSONs/1.1.1/GSME/TOU/1.1.1 - GSME - TOU"): Path("templates/1.1.1/gsme-tou.json"),
     Path("JSONs/1.6/1.6 - Credit Mode"): Path("templates/1.6/credit-mode.json"),
     Path("JSONs/1.6/1.6 - Prepay Mode"): Path("templates/1.6/prepay-mode.json"),
-    Path("JSONs/1.7/1.7"): Path("templates/1.7/default.json"),
     Path("JSONs/2.2/2.2"): Path("templates/2.2/default.json"),
-    Path("JSONs/2.5/2.5"): Path("templates/2.5/default.json"),
     Path("JSONs/3.1/3.1"): Path("templates/3.1/default.json"),
     Path("JSONs/3.2/3.2"): Path("templates/3.2/default.json"),
     Path("JSONs/3.3/3.3"): Path("templates/3.3/default.json"),
     Path("JSONs/3.4/3.4"): Path("templates/3.4/default.json"),
-    Path("JSONs/3.5/3.5"): Path("templates/3.5/default.json"),
-    Path("JSONs/4.1.1/4.1.1"): Path("templates/4.1.1/default.json"),
-    Path("JSONs/4.1.2/4.1.2"): Path("templates/4.1.2/default.json"),
-    Path("JSONs/4.1.3/4.1.3"): Path("templates/4.1.3/default.json"),
-    Path("JSONs/4.1.4/4.1.4"): Path("templates/4.1.4/default.json"),
-    Path("JSONs/4.2/4.2"): Path("templates/4.2/default.json"),
-    Path("JSONs/4.3/4.3"): Path("templates/4.3/default.json"),
-    Path("JSONs/4.4.2/4.4.2"): Path("templates/4.4.2/default.json"),
-    Path("JSONs/4.4.3/4.4.3"): Path("templates/4.4.3/default.json"),
-    Path("JSONs/4.4.4/4.4.4"): Path("templates/4.4.4/default.json"),
-    Path("JSONs/4.4.5/4.4.5"): Path("templates/4.4.5/default.json"),
-    Path("JSONs/4.6.1/4.6.1"): Path("templates/4.6.1/default.json"),
-    Path("JSONs/4.6.2/4.6.2"): Path("templates/4.6.2/default.json"),
-    Path("JSONs/4.8.1/4.8.1"): Path("templates/4.8.1/default.json"),
-    Path("JSONs/4.11.1/4.11.1"): Path("templates/4.11.1/default.json"),
-    Path("JSONs/4.11.2/4.11.2"): Path("templates/4.11.2/default.json"),
-    Path("JSONs/4.12.1/4.12.1"): Path("templates/4.12.1/default.json"),
-    Path("JSONs/4.12.2/4.12.2"): Path("templates/4.12.2/default.json"),
-    Path("JSONs/4.13/4.13"): Path("templates/4.13/default.json"),
-    Path("JSONs/4.14/4.14"): Path("templates/4.14/default.json"),
-    Path("JSONs/4.15/4.15"): Path("templates/4.15/default.json"),
-    Path("JSONs/4.16/4.16"): Path("templates/4.16/default.json"),
-    Path("JSONs/4.17/4.17"): Path("templates/4.17/default.json"),
-    Path("JSONs/4.18/4.18"): Path("templates/4.18/default.json"),
     Path("JSONs/5.2/by Device ID"): Path("templates/5.2/by-device-id.json"),
     Path("JSONs/5.2/by DSPScheduleID"): Path("templates/5.2/by-dsp-schedule-id.json"),
     Path("JSONs/5.3/by Device ID"): Path("templates/5.3/by-device-id.json"),
     Path("JSONs/5.3/by DSPScheduleID"): Path("templates/5.3/by-dsp-schedule-id.json"),
-    Path("JSONs/6.2.1/6.2.1"): Path("templates/6.2.1/default.json"),
-    Path("JSONs/6.2.2/6.2.2"): Path("templates/6.2.2/default.json"),
-    Path("JSONs/6.2.3/6.2.3"): Path("templates/6.2.3/default.json"),
-    Path("JSONs/6.2.4/6.2.4"): Path("templates/6.2.4/default.json"),
-    Path("JSONs/6.2.5/6.2.5"): Path("templates/6.2.5/default.json"),
-    Path("JSONs/6.2.7/6.2.7"): Path("templates/6.2.7/default.json"),
-    Path("JSONs/6.2.8/6.2.8"): Path("templates/6.2.8/default.json"),
-    Path("JSONs/6.2.9/6.2.9"): Path("templates/6.2.9/default.json"),
     Path("JSONs/6.6/6.6"): Path("templates/6.6/default.json"),
     Path("JSONs/6.7/6.7"): Path("templates/6.7/default.json"),
     Path("JSONs/6.11/6.11"): Path("templates/6.11/default.json"),
@@ -64,19 +34,8 @@ TEMPLATES = {
     Path("JSONs/6.24.1/6.24.1"): Path("templates/6.24.1/default.json"),
     Path("JSONs/6.24.2/6.24.2"): Path("templates/6.24.2/default.json"),
     Path("JSONs/6.26/6.26"): Path("templates/6.26/default.json"),
-    Path("JSONs/6.27/6.27"): Path("templates/6.27/default.json"),
-    Path("JSONs/6.29/6.29"): Path("templates/6.29/default.json"),
-    Path("JSONs/6.30/6.30"): Path("templates/6.30/default.json"),
-    Path("JSONs/6.31/6.31"): Path("templates/6.31/default.json"),
     Path("JSONs/6.32/6.32"): Path("templates/6.32/default.json"),
-    Path("JSONs/7.1/7.1"): Path("templates/7.1/default.json"),
-    Path("JSONs/7.2/7.2"): Path("templates/7.2/default.json"),
-    Path("JSONs/7.3/7.3"): Path("templates/7.3/default.json"),
-    Path("JSONs/7.4/7.4"): Path("templates/7.4/default.json"),
-    Path("JSONs/7.11/7.11"): Path("templates/7.11/default.json"),
     Path("JSONs/7.12/7.12"): Path("templates/7.12/default.json"),
-    Path("JSONs/7.14/7.14"): Path("templates/7.14/default.json"),
-    Path("JSONs/7.15/7.15"): Path("templates/7.15/default.json"),
     Path("JSONs/8.1.1/8.1.1"): Path("templates/8.1.1/default.json"),
     Path("JSONs/8.2/byDeviceID"): Path("templates/8.2/by-device-id.json"),
     Path("JSONs/8.2/byMPXN"): Path("templates/8.2/by-mpxn.json"),
@@ -88,7 +47,6 @@ TEMPLATES = {
     Path("JSONs/8.11/Remove"): Path("templates/8.11/remove.json"),
     Path("JSONs/8.9/with ReadSecurityDetails"): Path("templates/8.9/with-read-security-details.json"),
     Path("JSONs/8.9/without ReadSecurityDetails"): Path("templates/8.9/without-read-security-details.json"),
-    Path("JSONs/11.2/11.2"): Path("templates/11.2/default.json"),
 }
 
 
@@ -102,6 +60,32 @@ def extract_payload(source: Path) -> dict:
 
 
 def main() -> None:
+    empty_payload = {
+        "duisVersion": "",
+        "header": {
+            "originatorName": "",
+            "target": "",
+            "sr": "",
+            "srv": "",
+            "cv": 0,
+        },
+        "bodyParameters": {},
+    }
+    EMPTY_BODY_TEMPLATE.parent.mkdir(parents=True, exist_ok=True)
+    EMPTY_BODY_TEMPLATE.write_text(
+        json.dumps(empty_payload, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    print(f"Created {EMPTY_BODY_TEMPLATE}")
+
+    read_log_period_payload = extract_payload(Path("JSONs/7.11/7.11"))
+    READ_LOG_PERIOD_TEMPLATE.parent.mkdir(parents=True, exist_ok=True)
+    READ_LOG_PERIOD_TEMPLATE.write_text(
+        json.dumps(read_log_period_payload, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    print(f"Created {READ_LOG_PERIOD_TEMPLATE}")
+
     for source, destination in TEMPLATES.items():
         payload = extract_payload(source)
         destination.parent.mkdir(parents=True, exist_ok=True)

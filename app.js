@@ -56,6 +56,7 @@ async function loadFilterOptions() {
       availableServiceRequestVariants,
       filterOptions.curlCommandTemplate,
       filterOptions.environmentPorts,
+      environmentSetup,
     );
   } catch (error) {
     console.error(error);
@@ -222,13 +223,18 @@ function initialiseSrvCombobox(options, roleOptions) {
       typeof option === "object" && option.srv === srv,
     );
     const commandVariants = srvConfig?.commandVariants ?? allCommandVariants;
+    const usesSharedTemplate = srvConfig?.payloadTemplates?.some(
+      (template) => template.path.startsWith("templates/shared/"),
+    );
     for (const value of commandVariants) {
       const option = document.createElement("option");
       option.value = value;
       option.textContent = value;
       commandVariantSelect.append(option);
     }
-    if (commandVariants.includes(selectedCommandVariant)) {
+    if (usesSharedTemplate && commandVariants.length) {
+      commandVariantSelect.value = commandVariants[0];
+    } else if (commandVariants.includes(selectedCommandVariant)) {
       commandVariantSelect.value = selectedCommandVariant;
     }
   }
@@ -318,7 +324,12 @@ function initialiseSrvCombobox(options, roleOptions) {
   });
 }
 
-function initialisePayloadPreview(srvOptions, curlCommandTemplate, environmentPorts) {
+function initialisePayloadPreview(
+  srvOptions,
+  curlCommandTemplate,
+  environmentPorts,
+  environmentSetup,
+) {
   const form = document.getElementById("filter-form");
   const srvInput = document.getElementById("service-request-variant-input");
   const templateSelect = document.getElementById("payload-template");
@@ -332,6 +343,8 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate, environmentPo
   const futureDatedInput = document.getElementById("future-dated");
   const futureDatedValue = document.getElementById("future-dated-value");
   const futureDatedFormatted = document.getElementById("future-dated-formatted");
+  const oldUserKaField = document.getElementById("old-user-ka-field");
+  const oldUserKaInput = document.getElementById("old-user-ka");
   const payloadOutput = document.getElementById("payload-output");
   const copyButton = document.getElementById("copy-payload");
   const environmentSelect = document.getElementById("environment");
@@ -345,6 +358,45 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate, environmentPo
   let loadedPayload = null;
 
   const normalizeEnv = (value) => String(value ?? "").replace(/[^0-9A-Za-z]/g, "").toUpperCase();
+  const gbcskaRoles = new Set([
+    "Meter Data Retriever",
+    "Other User",
+    "Registered Supplier Agent",
+  ]);
+  const supplierRoles = new Set([
+    "Import Supplier 1",
+    "Import Supplier 2",
+    "Gas Supplier 1",
+    "Gas Supplier 2",
+  ]);
+
+  function selectedGbcska() {
+    const environmentKey = Object.keys(environmentSetup ?? {}).find(
+      (key) => normalizeEnv(key) === normalizeEnv(environmentSelect.value),
+    );
+    const records = environmentSetup?.[environmentKey]?.[versionSelect.value] ?? [];
+    return records.find((record) => record.role === roleSelect.value)?.gbcska;
+  }
+
+  function formatUtcDate(date) {
+    const year = date.getUTCFullYear();
+    const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+    const day = String(date.getUTCDate()).padStart(2, "0");
+    return `${year}-${month}-${day}T00:00:00.00Z`;
+  }
+
+  function readLogPeriodDates(now = new Date()) {
+    const year = now.getUTCFullYear();
+    const month = now.getUTCMonth();
+    const day = now.getUTCDate();
+    const daysInPreviousMonth = new Date(Date.UTC(year, month, 0)).getUTCDate();
+    const oneMonthAgo = new Date(Date.UTC(year, month - 1, Math.min(day, daysInPreviousMonth)));
+    const yesterday = new Date(Date.UTC(year, month, day - 1));
+    return {
+      startDateTime: formatUtcDate(oneMonthAgo),
+      endDateTime: formatUtcDate(yesterday),
+    };
+  }
 
   const today = new Date();
   const year = today.getFullYear();
@@ -367,6 +419,15 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate, environmentPo
       futureDatedFormatted.value = "";
       futureDatedFormatted.hidden = true;
     }
+  }
+
+  function updateOldUserKaVisibility() {
+    const isAvailable = Boolean(
+      selectedSrvConfig()?.optionalKaPublicSecurityCredentials
+      && supplierRoles.has(roleSelect.value),
+    );
+    oldUserKaField.hidden = !isAvailable;
+    if (!isAvailable) oldUserKaInput.checked = false;
   }
 
   function remotePartyRolesAvailable() {
@@ -529,10 +590,12 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate, environmentPo
     }
     if (srvChanged) {
       loadedPayload = null;
+      oldUserKaInput.checked = false;
       copyButton.disabled = true;
       payloadOutput.textContent = "Your generated payload will appear here.";
     }
     updateFutureDatedVisibility();
+    updateOldUserKaVisibility();
     updateRemotePartyRoleVisibility();
     updateCredentialTypeVisibility();
     updateEsmeEventLogTypeVisibility();
@@ -544,6 +607,7 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate, environmentPo
     copyButton.disabled = true;
     payloadOutput.textContent = "Your generated payload will appear here.";
     updateFutureDatedVisibility();
+    updateOldUserKaVisibility();
     updateRemotePartyRoleVisibility();
     updateCredentialTypeVisibility();
     updateEsmeEventLogTypeVisibility();
@@ -598,6 +662,44 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate, environmentPo
       if (!response.ok) throw new Error(`Payload template request failed (${response.status})`);
       loadedPayload = await response.json();
       let appliedSelections = false;
+      const srvParts = srvInput.value.split(".");
+      loadedPayload.header ??= {};
+      loadedPayload.header.srv = srvInput.value;
+      loadedPayload.header.sr = srvParts.length > 2
+        ? srvParts.slice(0, -1).join(".")
+        : srvInput.value;
+      appliedSelections = true;
+      if (templateSelect.value === "templates/shared/readLogPeriod.json") {
+        loadedPayload.bodyParameters ??= {};
+        loadedPayload.bodyParameters.readLogPeriod = readLogPeriodDates();
+        appliedSelections = true;
+      }
+      if (selectedSrvConfig()?.kaPublicSecurityCredentials && gbcskaRoles.has(roleSelect.value)) {
+        const gbcska = selectedGbcska();
+        if (!gbcska) {
+          throw new Error(
+            `No GBCS KA public security credentials match ${environmentSelect.value}, ${versionSelect.value}, and ${roleSelect.value}.`,
+          );
+        }
+        loadedPayload.bodyParameters ??= {};
+        loadedPayload.bodyParameters.KAPublicSecurityCredentials = gbcska;
+        appliedSelections = true;
+      }
+      if (
+        selectedSrvConfig()?.optionalKaPublicSecurityCredentials
+        && supplierRoles.has(roleSelect.value)
+        && oldUserKaInput.checked
+      ) {
+        const gbcska = selectedGbcska();
+        if (!gbcska) {
+          throw new Error(
+            `No GBCS KA public security credentials match ${environmentSelect.value}, ${versionSelect.value}, and ${roleSelect.value}.`,
+          );
+        }
+        loadedPayload.bodyParameters ??= {};
+        loadedPayload.bodyParameters.KAPublicSecurityCredentials = gbcska;
+        appliedSelections = true;
+      }
       if (["6.11", "8.1.1"].includes(srvInput.value)) {
         loadedPayload.bodyParameters ??= {};
         loadedPayload.bodyParameters.currentDateTime = new Date()
@@ -652,7 +754,9 @@ function initialisePayloadPreview(srvOptions, curlCommandTemplate, environmentPo
       console.error(error);
       payloadOutput.textContent = "Unable to load the selected payload template.";
       copyButton.disabled = true;
-      status.textContent = "Unable to generate the payload.";
+      status.textContent = error.message.startsWith("No GBCS KA")
+        ? error.message
+        : "Unable to generate the payload.";
     }
   });
 
